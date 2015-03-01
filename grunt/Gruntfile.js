@@ -84,5 +84,5 @@ module.exports = function(grunt) {
     
     
     grunt.registerTask('build', ['uglify:js']);
-    grunt.registerTask('server', ['nodemon:dev', 'watch:server', 'uglify:js']);
+    grunt.registerTask('default', ['nodemon:dev', 'watch:server', 'uglify:js']);
 };

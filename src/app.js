@@ -1,3 +1,4 @@
+var cluster = require('cluster');
 var logger;
 var _ = require('underscore');
 
@@ -15,7 +16,7 @@ logger.debug("Initializing development configuration.");
 var express = require("express");
 var app = express();
 
-var expressConfig = require("./express");
+var expressConfig = require("./config/express");
 
 logger.info("configuring express....");
 expressConfig.init(app, express);

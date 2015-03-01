@@ -1,6 +1,233 @@
-Home page
+@html.extend('layout', function(model) { 
+    @html.block('body', function (model) {
 
+        <section class="light" id="hero" style="height: 1228px;">
+            <div class="container">
+                <div class="home-bg">
+                    <nav class="navigation navigation-social">
+                        <ul class="navigation-bar">
+                            <li>
+                                <a href="https://twitter.com/webnextconf"><span class="fa fa-twitter"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/WebnextConf"><span class="fa fa-facebook"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Web-European-Conference"><span class="fa fa-github"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://vimeo.com/webeuropeanconference"><span class="fa fa-vimeo-square"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/100110205841080468535"><span class="fa fa-google-plus"></span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="hero-content text-center ">
+                        <div class="row" style="width: 90%; margin: 0px auto 30px auto;">
+                            <img src="/images/logo.png" width="550" height="204" class="img-responsive" style="display: inline;" />
+                        </div>
+                        <div class="hero-small">
 
-@if (model.user) {
-	<div>@model.user.username</div>
-}
+                            <hr><span><span class="fa fa-calendar"></span>September 26, 2015
+                            <div class="sep"></div> <span class="fa fa-map-marker"></span>University of Milano Bicocca</span>
+                            <hr>
+                        </div>
+                        <div class="hero-big">Web European
+                            <br>Conference</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <header id="header" class="navigation-bar-header light hidden-xs">
+            <div class="container">
+                <nav class="navigation">
+                    <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
+                    <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="navigation-bar navigation-bar-left">
+                        <li style="margin-right: 10px;"><img src="/images/logo-menu.png" width="162" height="60" />
+                        </li>
+                        <li class="active">
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#schedule">Schedule</a>
+                        </li>
+                        <li>
+                            <a href="#speakers">Call For Presenters</a>
+                        </li>
+                        <li>
+                            <a href="#sponsors">Sponsors</a>
+                        </li>
+                        <li>
+                            <a href="#map">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- End Menu -->
+
+        <div class="clearfix"></div>
+
+        <!-- About -->
+        <section id="about" class="section dark">
+            <div class="container">
+                <div class="icon-wrap">
+                    <span class="icon icon-office-10 icon-active"></span>
+                </div>
+                <h3>26 September 2015</h3>
+                <div class="sub-title" style="margin-bottom: 80px;">The first European Conference dedicated to the future of Development on all technlogies.
+                    <br />Everything about the newest and coolest framework for building modern web applications and websites:
+                    <br />ASP.NET vNext, node.js, ruby, angular.js and much more.</div>
+                <br />
+                <br />
+            </div>
+        </section>
+        <!--  End About -->
+
+        <!-- Stats -->
+        <section id="stat" class="section light">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="0">
+                            <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
+                            </div>
+                            <div class="stat-info">hours</div>
+                            <p class="small">Get ready to experience an intense day packed with lots of hours of good content, knowledge exchange and fun.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="500">
+                            <div class="stat"><span class="value" data-from="0" data-to="15">15</span>
+                            </div>
+                            <div class="stat-info">speakers</div>
+                            <p class="small">We are expecting international speakers: the CFP is open now, expect to know more soon.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1000">
+                            <div class="stat"><span class="value" data-from="0" data-to=10>10</span>+</div>
+                            <div class="stat-info">technologies</div>
+                            <p class="small">ASP.NET vNext, AngularJS, Node.js, Ruby, Git, Javascript, and much more: all modern web development technologies will be represented.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1500">
+                            <div class="stat"><span class="value" data-from="0" data-to="3">3</span>
+                            </div>
+                            <div class="stat-info">halls</div>
+                            <p class="small">To provide the best experience, we'll have a big plenary hall and other rooms for the sessions through the day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Stats -->
+
+        <!-- c4p -->
+        <section class="section dark" id="schedule">
+            <div class="container">
+                <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span>
+                </div>
+                <h3>Full schedule</h3>
+                <div class="sub-title">The Call for Presenters is still underway, and we expect to have more information around June;
+                    <br/> we will make sure all the sessions will be about developlent tools and practices for modern web development.
+                    <br/> There will be 3 (or maybe 4) halls, for parallel track, for a total of 13 to 20 sessions in total.
+                </div>
+                <br>
+                <br>
+            </div>
+        </section>
+        <!-- End c4p -->
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="section dark">
+            <div class="overlay"></div>
+            <div class="container">
+                <article class="article-big animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
+                    <h5>Newsletter <span class="highlight">Signup</span></h5>
+                    <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
+                    <form id="subscribe" class="form" action="/demo/ventcamp/index-photo.html" method="post">
+                        <div class="form-group form-inline">
+                            <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com">
+                            <input type="submit" class="btn btn-xs btn-default" value="Submit">
+                            <span id="response">
+                                  </span>
+                        </div>
+
+                    </form>
+                </article>
+            </div>
+        </section>
+        <!-- End Newsletter -->
+
+        <!-- Call 4 Paper -->
+        <section id="speakers" class="section light">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span>
+                </div>
+                <h3>CFP</h3>
+                <div class="sub-title">Do you think you have something you want to share and show at the conferece? The site is not ready yet, but you can start submitting your proposal by forking our proposals' repository and adding yours: <a href="https://github.com/Web-European-Conference/c4p" target="_blank">github.com/Web-European-Conference/c4p</a>
+                </div>
+                <br />
+                <br />
+            </div>
+        </section>
+        <!-- End Call 4 Paper -->
+
+        <!-- Sponsor -->
+        <section class="section dark" id="sponsors">
+            <div class="container">
+                <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span>
+                </div>
+                <h3>Sponsors</h3>
+                <div class="sub-title">All of this wouldn't be possible without the support of these awesome partners</div>
+                <br>
+                <div class="row">
+                    <ul class="list-inline">
+                        <li>
+                            <a target="_blank" href="http://www.greenbubble.it/"><img alt="Greenbubble" src="/images/sponsor-greenbubble.png">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="btn-wrapper">
+                        <a class="btn btn-sm btn-primary" href="#">Become a sponsor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Sponsor -->
+
+        <!-- Map -->
+        <section id="map" class="dark">
+            <div id="canvas-map"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
+                        <h3>Location</h3>
+                        <ul itemscope="" itemtype="http://schema.org/PostalAddress">
+                            <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Università Milano Bicocca</li>
+                            <li itemprop="email"><i class="fa fa-envelope highlight"></i>info@@webnextconf.eu</li>
+                            <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
+                                <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
+                                <time itemprop="endDate" datetime="2015-09-26T19:00">19:00</time>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Map -->
+    }) 
+})
