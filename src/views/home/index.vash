@@ -82,7 +82,7 @@
                 <div class="icon-wrap">
                     <span class="icon icon-office-10 icon-active"></span>
                 </div>
-                <h3>26 September 2015</h3>
+                <h3>Modern Web development</h3>
                 <div class="sub-title" style="margin-bottom: 80px;">The first European Conference dedicated to the future of Development on all technlogies.
                     <br />Everything about the newest and coolest framework for building modern web applications and websites:
                     <br />ASP.NET vNext, node.js, ruby, angular.js and much more.</div>
@@ -91,8 +91,8 @@
 						<section class="nav-tabs-simple">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-justified">
-								<li class="active"><a href="#htmlcss" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Topics</a></li>
-								<li><a href="#jquery" data-toggle="tab"><i class="icon icon-education-science-11"></i> Workshops</a></li>
+								<li class="active"><a href="#htmlcss" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Our Manifesto</a></li>
+								<li><a href="#jquery" data-toggle="tab"><i class="icon icon-education-science-11"></i> Topics</a></li>
 								<li><a href="#php" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
 							</ul>
 
@@ -104,12 +104,13 @@
 											<img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
 										</div>
 										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-											<h6>What you will learn</h6>
-							<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable <a href="#">content</a>.</p>
+											<h6>What is the conference about</h6>
+							<p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and will go to a more light-weight and simple approach. This is exactly what our conference will be about.</p>
 							<ul class="sub-list">
-								<li><i class="icon icon-documents-bookmarks-16"></i> Learn how to start a startup</li>
-								<li><i class="icon icon-documents-bookmarks-11"></i> New age of marketing</li>
-								<li><i class="icon icon-documents-bookmarks-10"></i> Choosing your market</li>
+								<li><i class="icon icon-documents-bookmarks-16"></i> Code Craftsmenship: Developers are taking back the control, of the code they write, on how they write and on which tools make them productive.</li>
+								<li><i class="icon icon-documents-bookmarks-11"></i> Tiny assemblable frameworks</li>
+                                <li><i class="icon icon-documents-bookmarks-10"></i> BYOT (Bring Your Own Tool)</li>
+								<li><i class="icon icon-documents-bookmarks-10"></i> Mobile First</li>
 							</ul>
 						</div>
 									</article>
@@ -136,9 +137,8 @@
 											<img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
 										</div>
 										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-											<h6>About Ventcamp conference</h6>
-										<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable content.</p>
-						<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Distracted by the readable <a href="#">content</a>.</p>
+											<h6>About the Web European Conference</h6>
+										<p></p>
 										</div>
 									</article></div>
 							</div>
