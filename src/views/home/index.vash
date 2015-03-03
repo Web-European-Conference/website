@@ -1,4 +1,4 @@
-@html.extend('layout', function(model) { 
+@html.extend('layout', function(model) {
     @html.block('body', function (model) {
 
         <section class="light" id="hero" style="height: 1228px;">
@@ -88,8 +88,64 @@
                     <br />ASP.NET vNext, node.js, ruby, angular.js and much more.</div>
                 <br />
                 <br />
-            </div>
-        </section>
+						<section class="nav-tabs-simple">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs nav-justified">
+								<li class="active"><a href="#htmlcss" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Topics</a></li>
+								<li><a href="#jquery" data-toggle="tab"><i class="icon icon-education-science-11"></i> Workshops</a></li>
+								<li><a href="#php" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div class="tab-pane fade in active" id="htmlcss">
+									<article class="row">
+										<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+											<img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
+										</div>
+										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+											<h6>What you will learn</h6>
+							<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable <a href="#">content</a>.</p>
+							<ul class="sub-list">
+								<li><i class="icon icon-documents-bookmarks-16"></i> Learn how to start a startup</li>
+								<li><i class="icon icon-documents-bookmarks-11"></i> New age of marketing</li>
+								<li><i class="icon icon-documents-bookmarks-10"></i> Choosing your market</li>
+							</ul>
+						</div>
+									</article>
+								</div>
+								<div class="tab-pane fade" id="jquery">
+									<article class="row">
+						<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+											<h6>What we will do</h6>
+							<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable <a href="#">content</a>.</p>
+							<ul class="sub-list">
+								<li><i class="icon icon-documents-bookmarks-16"></i> Lorem ipsum dolor sit atmet</li>
+								<li><i class="icon icon-documents-bookmarks-11"></i> Lorem ipsum dolor sit atmet</li>
+								<li><i class="icon icon-documents-bookmarks-10"></i> Lorem ipsum dolor sit atmet</li>
+							</ul>
+						</div>
+						<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
+											<img class="img-responsive" src="assets/img/about-placeholder-mbp.jpg" alt="placeholder" />
+										</div>
+									</article>
+								</div>
+								<div class="tab-pane fade" id="php">
+									<article class="row">
+										<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+											<img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
+										</div>
+										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+											<h6>About Ventcamp conference</h6>
+										<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable content.</p>
+						<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Distracted by the readable <a href="#">content</a>.</p>
+										</div>
+									</article></div>
+							</div>
+						</section>
+						</div>
+						</section>
+
         <!--  End About -->
 
         <!-- Stats -->
@@ -229,5 +285,5 @@
             </div>
         </section>
         <!-- End Map -->
-    }) 
+    })
 })
