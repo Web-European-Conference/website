@@ -93,7 +93,7 @@
 							<ul class="nav nav-tabs nav-justified">
 								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Our Manifesto</a></li>
 								<li><a href="#topics" data-toggle="tab"><i class="icon icon-education-science-11"></i> Topics</a></li>
-								<li><a href="#about" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
+								<li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
 							</ul>
 
 							<!-- Tab panes -->
@@ -136,7 +136,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="tab-pane fade" id="about">
+								<div class="tab-pane fade" id="aboutus">
 									<article class="row">
 										<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
 											<img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
