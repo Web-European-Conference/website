@@ -110,6 +110,59 @@
 
         //$('.fancybox').fancybox();
 
+        //
+        //  Newsletter Signup
+        //
+
+        var $subscribe = $('#subscribe'),
+            $response = $('#response'),
+            $newsletterEmail = $('#NewsletterEmail');
+
+        $subscribe.on('submit', function (event) {
+            event.preventDefault();
+
+            // update user interface
+            $response.html('<span class="notice_message">Adding email address...</span>');
+             
+            // Prepare query string and send AJAX request
+            $.ajax({
+                url: '/api/notify/join',
+                type: 'POST',
+                data: {
+                    email: $newsletterEmail.val()
+                },
+                success: function(data, textStatus, jqXHR) {
+                    
+                    // show message
+                    $response.html('<span class="success_message">' + data + '</span>');
+
+                    // clear field
+                    $newsletterEmail.val('');
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    //console.log(jqXHR, textStatus, errorThrown);
+
+                    if (jqXHR.responseText) {
+
+                        $response.html('<span class="error_message">' + jqXHR.responseText + '</span>');
+
+                    } else if (jqXHR.responseJSON) {
+                        if (jQuery.isArray(jqXHR.responseJSON)) {
+                            // output messages
+                            $response.html('<span class="error_message">' + jQuery.map(jqXHR.responseJSON, function (v) {
+                                return v.msg;
+                            }).join(', ') + '</span>');
+                        }
+                    }
+
+                }
+            });
+        
+            return false;
+        });
+
     });
 
     // ****** GOOGLE MAP *******

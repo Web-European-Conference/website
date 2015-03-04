@@ -3,6 +3,28 @@
     var logger = require('../utils/logger');
 
     notifyController.init = function (app) {
+        
+        //
+        //  TEST ENDPOINT (FOR TESTING RESPONSE CODES WITHOUT MAILCHIMP)
+        //  
+
+        // app.post('/api/notify/join', function (req, res) {
+
+        //     // req.assert('email', 'Field required').notEmpty();
+        //     // req.assert('email', 'Invalid email format').isEmail();
+
+        //     // var errors = req.validationErrors();
+
+        //     // res.json(400, errors);
+
+        //     //res.status(400).send("User already subscribed");
+
+        //     //res.status(500).send("Something went wrong. Please try again. " + error);
+
+        //      res.send("Thanks for signing up!");
+
+        // });
+
         app.post('/api/notify/join', function (req, res) {
 
             logger.debug('email value: ' + req.body.email);
@@ -37,7 +59,7 @@
 
                         if (error.code == 214) {
                             logger.debug("User already subscribed");
-                            res.status(304).send("User already subscribed");
+                            res.status(400).send("User already subscribed");
                         } else {
                             logger.error("There is an error calling MailChimp: " + error);
                             res.status(500).send("Something went wrong. Please try again. " + error);

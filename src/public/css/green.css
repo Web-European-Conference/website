@@ -355,6 +355,9 @@ hr.white { border-color: #F3AE9B; }
 
 #newsletter .form-control { text-align: center; min-width: 300px; }
 #response {display: block; padding-top: 15px;}
+#response .error_message, #response .success_message, #response .notice_message { display: inline-block; padding: 5px 10px; }
+#response .success_message { background: #00cc00; color: #fff; }
+#response .error_message { background: #f00; color: #fff; }
 
 label.error { display: block; }
 

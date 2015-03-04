@@ -219,14 +219,12 @@
                 <article class="article-big animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
                     <h5>Newsletter <span class="highlight">Signup</span></h5>
                     <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
-                    <form id="subscribe" class="form" action="/demo/ventcamp/index-photo.html" method="post">
+                    <form id="subscribe" class="form" method="post">
                         <div class="form-group form-inline">
-                            <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com">
+                            <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" required>
                             <input type="submit" class="btn btn-xs btn-default" value="Submit">
-                            <span id="response">
-                                  </span>
+                            <span id="response"></span>
                         </div>
-
                     </form>
                 </article>
             </div>
