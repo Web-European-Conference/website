@@ -91,8 +91,8 @@
 						<section class="nav-tabs-simple">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-justified">
-								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Our Manifesto</a></li>
-								<li><a href="#topics" data-toggle="tab"><i class="icon icon-education-science-11"></i> Topics</a></li>
+								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-education-science-07"></i> Our Manifesto</a></li>
+								<li><a href="#topics" data-toggle="tab"><i class="icon icon-messages-01"></i> Topics</a></li>
 								<li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
 							</ul>
 
@@ -104,13 +104,13 @@
 											<img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
 										</div>
 										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-											<h6>What is the conference about</h6>
+											<h6>What the conference is about</h6>
 							<p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and is going to a more light-weight and simple approach. This is exactly what our conference is about.</p>
 							<ul class="sub-list">
-								<li><i class="icon icon-documents-bookmarks-16"></i> Code Craftsmenship<br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
-								<li><i class="icon icon-documents-bookmarks-11"></i> Tiny assemblable frameworks<br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
-                                <li><i class="icon icon-documents-bookmarks-10"></i> BYOT<br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
-								<li><i class="icon icon-documents-bookmarks-10"></i> Mobile First<br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
+								<li><i class="icon icon-documents-seo-icons-25"></i> Code Craftsmenship<br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
+								<li><i class="icon icon-documents-education-science-16"></i> Tiny assemblable frameworks<br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
+                                <li><i class="icon icon-documents-seo-icons-28"></i> BYOT<br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
+								<li><i class="icon icon-documents-multimedia-33"></i> Mobile First<br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
 							</ul>
 						</div>
 									</article>
