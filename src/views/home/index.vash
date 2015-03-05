@@ -92,7 +92,7 @@
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-justified">
 								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-seo-icons-24"></i> Our Manifesto</a></li>
-								<li><a href="#topics" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Topics</a></li>
+								<li><a href="#topics" data-toggle="tab"><i class="icon icon-chat-messages-08"></i> Topics</a></li>
 								<li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
 							</ul>
 
