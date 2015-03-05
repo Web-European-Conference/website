@@ -91,8 +91,8 @@
 						<section class="nav-tabs-simple">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-justified">
-								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-education-science-07"></i> Our Manifesto</a></li>
-								<li><a href="#topics" data-toggle="tab"><i class="icon icon-messages-01"></i> Topics</a></li>
+								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-seo-icons-24"></i> Our Manifesto</a></li>
+								<li><a href="#topics" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Topics</a></li>
 								<li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
 							</ul>
 
@@ -107,10 +107,10 @@
 											<h6>What the conference is about</h6>
 							<p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and is going to a more light-weight and simple approach. This is exactly what our conference is about.</p>
 							<ul class="sub-list">
-								<li><i class="icon icon-documents-seo-icons-25"></i> Code Craftsmenship<br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
-								<li><i class="icon icon-documents-education-science-16"></i> Tiny assemblable frameworks<br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
-                                <li><i class="icon icon-documents-seo-icons-28"></i> BYOT<br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
-								<li><i class="icon icon-documents-multimedia-33"></i> Mobile First<br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
+								<li><i class="icon icon-seo-icons-25"></i> Code Craftsmenship<br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
+								<li><i class="icon icon-education-science-16"></i> Tiny assemblable frameworks<br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
+                                <li><i class="icon icon-seo-icons-28"></i> BYOT<br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
+								<li><i class="icon icon-multimedia-33"></i> Mobile First<br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
 							</ul>
 						</div>
 									</article>
@@ -122,13 +122,13 @@
 							<p>After a plenary session held by a prominent speaker, there will be some parallel tracks split in different rooms so that everyone will be able to attend the sessions that most suit them.</p>
                                 <p>Hereafter a selection of possible topics:</p>
 							<ul class="sub-list">
-								<li><i class="icon icon-documents-bookmarks-16"></i>ASP.NET vNext</li>
-                                <li><i class="icon icon-documents-bookmarks-11"></i>Node.js</li>
-								<li><i class="icon icon-documents-bookmarks-11"></i>Ruby</li>
-                                <li><i class="icon icon-documents-bookmarks-10"></i>Javascript frameworks</li>
-                                <li><i class="icon icon-documents-bookmarks-10"></i>Best practices for modern web development</li>
-                                <li><i class="icon icon-documents-bookmarks-10"></i>Cloud</li>
-								<li><i class="icon icon-documents-bookmarks-10"></i>And more...</li>
+				<li><i class="icon icon-seo-icons-02"></i>ASP.NET vNext</li>
+                                <li><i class="icon icon-text-hierarchy-04"></i>Node.js</li>
+				<li><i class="icon icon-seo-icons-07"></i>Ruby</li>
+                                <li><i class="icon icon-ecology-16"></i>Javascript frameworks</li>
+                                <li><i class="icon icon-education-science-20"></i>Best practices for modern web development</li>
+                                <li><i class="icon icon-office-61"></i>Cloud</li>
+				<li><i class="icon icon-arrows-33"></i>And more...</li>
 							</ul>
 						</div>
 						<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
