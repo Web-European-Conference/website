@@ -116,7 +116,8 @@
 
         var $subscribe = $('#subscribe'),
             $response = $('#response'),
-            $newsletterEmail = $('#NewsletterEmail');
+            $newsletterEmail = $('#NewsletterEmail'),
+            $csrfToken = $('#csrfToken ');
 
         $subscribe.on('submit', function (event) {
             event.preventDefault();
@@ -129,7 +130,8 @@
                 url: '/api/notify/join',
                 type: 'POST',
                 data: {
-                    email: $newsletterEmail.val()
+                    email: $newsletterEmail.val(),
+                    _csrf: $csrfToken.val()
                 },
                 success: function(data, textStatus, jqXHR) {
                     

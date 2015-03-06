@@ -100,10 +100,10 @@
 							<div class="tab-content">
 								<div class="tab-pane fade in active" id="manifest">
 									<article class="row">
-										<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+										<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
 											<img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
-										</div>
-										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+										</div>-->
+										<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
 											<h6>What the conference is about</h6>
 							<p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and is going to a more light-weight and simple approach. This is exactly what our conference is about.</p>
 							<ul class="sub-list">
@@ -117,7 +117,7 @@
 								</div>
 								<div class="tab-pane fade" id="topics">
 									<article class="row">
-						<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+						<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
 											<h6>What we will talk about</h6>
 							<p>After a plenary session held by a prominent speaker, there will be some parallel tracks split in different rooms so that everyone will be able to attend the sessions that most suit them.</p>
                                 <p>Hereafter a selection of possible topics:</p>
@@ -131,17 +131,17 @@
 				<li><i class="icon icon-arrows-33"></i>And more...</li>
 							</ul>
 						</div>
-						<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
+						<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
 											<img class="img-responsive" src="assets/img/about-placeholder-mbp.jpg" alt="placeholder" />
-										</div>
+										</div>-->
 									</article>
 								</div>
 								<div class="tab-pane fade" id="aboutus">
 									<article class="row">
-										<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+										<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
 											<img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
-										</div>
-										<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+										</div>-->
+										<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
 											<h6>About the Web European Conference</h6>
 										<p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of <a href="http://2012.webnextconf.eu/">Web.NET European Conference</a>.</p>
                                                                                 <p>This year, with help of the university, we decided to do it bigger while keeping it free, so that more people can participate and be part of discussions about the latest trends in web development.</p>
@@ -221,6 +221,7 @@
                     <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
                     <form id="subscribe" class="form" method="post">
                         <div class="form-group form-inline">
+                            <input type="hidden" id="csrfToken" name="csrfToken" value="@model.csrfToken">
                             <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" required>
                             <input type="submit" class="btn btn-xs btn-default" value="Submit">
                             <span id="response"></span>
@@ -257,13 +258,19 @@
                 <div class="row">
                     <ul class="list-inline">
                         <li>
-                            <a target="_blank" href="http://www.greenbubble.it/"><img alt="Greenbubble" src="/images/sponsor-greenbubble.png">
+                            <a target="_blank" href="http://www.greenbubble.it/">
+                                <img alt="Greenbubble" src="/images/sponsor/sponsor-greenbubble.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.unimib.it/">
+                                <img alt="Universita' degli studi di Milano - Bicocca" src="/images/sponsor/unimib.png">
                             </a>
                         </li>
                     </ul>
 
                     <div class="btn-wrapper">
-                        <a class="btn btn-sm btn-primary" href="#">Become a sponsor</a>
+                        <a class="btn btn-sm btn-primary" href="mailto:info@@webnextconf.eu">Become a sponsor</a>
                     </div>
                 </div>
             </div>
@@ -279,7 +286,7 @@
                         <h3>Location</h3>
                         <ul itemscope="" itemtype="http://schema.org/PostalAddress">
                             <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca</li>
-                            <li itemprop="email"><i class="fa fa-envelope highlight"></i>info@@webnextconf.eu</li>
+                            <li itemprop="email"><i class="fa fa-envelope highlight"></i><a href="mailto:info@@webnextconf.eu">info@@webnextconf.eu</a></li>
                             <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
                                 <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
                                 <time itemprop="endDate" datetime="2015-09-26T19:00">19:00</time>

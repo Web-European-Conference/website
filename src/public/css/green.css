@@ -200,8 +200,32 @@ hr.white { border-color: #F3AE9B; }
 .buttons li { margin-bottom: 10px; }
 
 .sub-list {list-style:none; padding-left:0; padding-top:5px;}
-.sub-list i {vertical-align: middle; padding-right:25px; color:#fe4918; font-size: 21px;}
-.sub-list li {margin: 15px 0px; font-weight: 300;}
+.sub-list i {vertical-align: middle; padding-right:25px; color:#fe4918; font-size: 35px;}
+.sub-list li {margin: 15px 0px; font-weight: 300; font-size: 18px;}
+
+#about .sub-title {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 38px;
+}
+
+#schedule .sub-title {
+    margin-top: 40px;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 38px;
+}
+
+#speakers .sub-title {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 38px;
+}
 
 .nav-tabs-default { border: 1px solid #ddd; }
 .nav-tabs-default .nav-tabs { border-bottom: none; }
@@ -257,8 +281,8 @@ hr.white { border-color: #F3AE9B; }
 .nav-tabs-default .tab-pane .tab-pane { padding: 20px; padding-bottom: 10px; min-height: 100px; }
 .nav-tabs-default .tab-pane .nav-tabs.nav-justified > li > a { padding-left: 15px; padding-right: 15px; }
 
-.nav-tabs-simple .nav-tabs { position: relative; top:-30px; margin-bottom: 20px; }
-.nav-tabs-simple .tab-content { position: relative; margin-top: -10px; padding-bottom: 10px; }
+.nav-tabs-simple .nav-tabs { position: relative; top:0px; margin-bottom: 20px; }
+.nav-tabs-simple .tab-content { position: relative; margin-top: 0px; padding-bottom: 10px; min-height: 700px;}
 .nav-tabs-simple .nav-tabs li { border-bottom:1px solid #cecece; padding-bottom: 40px; text-align: center; }
 .nav-tabs-simple .nav-tabs li a { border: 1px solid transparent; font-size: 25px; color: #000; }
 .nav-tabs-simple .nav-tabs li a:Hover { background: none; color: #fe4918; }
@@ -432,10 +456,21 @@ label.error { display: block; }
     height: 31px;
     font-size: 18px; }
 #speakers .social-link a:Hover { opacity: 1; color:#fe4918; border-color:#fe4918; }
+#speakers h3{
+    color: #fff;
+}
+#speakers .sub-title
+{
+    color: white;
+}
+
+#subscribe{
+    margin-top: 40px;
+}
 
 #sponsors .list-inline li { width: 19%; padding-left: 0; padding-right: 0; }
 #sponsors .list-inline { margin-bottom:30px;}
-#sponsors img{ width: 100%;}
+/*#sponsors img{ width: 100%;}*/
 
 #location-gmap { width:100%; height:650px; }
 #location-gmap img { max-width:none; }
@@ -689,6 +724,10 @@ a{
 .navigation-bar{
     text-align: center;
 }
+.navigation-bar > li {
+    display: inline-block;
+    padding: 20px 10px;
+}
 
 .navigation-bar-header{
     background-color: rgba(255,255,255,1);
@@ -729,9 +768,25 @@ a{
 
 }
 #about, #schedule, #speakers, #sponsors{
-    padding-top: 100px;
+    padding-top: 125px;
     padding-bottom: 50px;
 }
+#about{
+    padding-bottom: 100px;
+}
+#schedule{
+    padding-bottom: 100px;
+}
+.nav-tabs-simple h6{
+    font-size: 36px;
+}
+.nav-tabs-simple p{
+      font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 38px;
+}
+
 .overlay{
     opacity: 0.2;
 }
@@ -740,7 +795,7 @@ a{
 
 }
 #stat .stat{
-    color: #fff;
+    /*color: #fff;*/
 }
 #stat .stat-info {
     font-size: 17pt;
@@ -763,8 +818,20 @@ a{
     font-size: 16px;
     padding-top: 20px;
 }
-.nav-tabs-simple p{
-    font-weight: normal;
+
+
+.article-big h5{
+    color: #fff;
+    font-size: 60px;
+}
+.article-big p{
+    color: #fff;
+    font-size: 24px !important;
+    font-weight: 200;
+}
+.article-big input{
+    color: #fff;
+    
 }
 
 /* TEST RESPONSIVE */
