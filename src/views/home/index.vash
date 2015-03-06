@@ -30,7 +30,7 @@
                         <div class="hero-small">
 
                             <hr><span><span class="fa fa-calendar"></span>September 26, 2015
-                            <div class="sep"></div> <span class="fa fa-map-marker"></span>University of Milano Bicocca</span>
+                            <div class="sep"></div> <span class="fa fa-map-marker"></span>Universita' degli studi di Milano - Bicocca</span>
                             <hr>
                         </div>
                         <div class="hero-big">Web European
@@ -170,7 +170,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="counter animated hiding" data-animation="fadeInDown" data-delay="500">
-                            <div class="stat"><span class="value" data-from="0" data-to="15">15</span>
+                            <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
                             </div>
                             <div class="stat-info">speakers</div>
                             <p class="small">We are expecting international speakers: the CFP is open now, expect to know more soon.</p>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1500">
-                            <div class="stat"><span class="value" data-from="0" data-to="3">3</span>
+                            <div class="stat"><span class="value" data-from="0" data-to="4">4</span>
                             </div>
                             <div class="stat-info">halls</div>
                             <p class="small">To provide the best experience, we'll have a big plenary hall and other rooms for the sessions through the day.</p>
@@ -278,7 +278,7 @@
                     <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
                         <h3>Location</h3>
                         <ul itemscope="" itemtype="http://schema.org/PostalAddress">
-                            <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Università Milano Bicocca</li>
+                            <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca</li>
                             <li itemprop="email"><i class="fa fa-envelope highlight"></i>info@@webnextconf.eu</li>
                             <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
                                 <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
