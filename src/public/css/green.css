@@ -377,7 +377,7 @@ hr.white { border-color: #F3AE9B; }
 .icon-bars .icon-bar { display: block; width: 22px; height: 2px; border-radius: 1px; background-color:#CCC; }  
 .icon-bars .icon-bar+.icon-bar { margin-top: 4px; }
 
-#newsletter .form-control { text-align: center; min-width: 300px; }
+#newsletter .form-control { text-align: center; min-width: 300px; color: black;}
 #response {display: block; padding-top: 15px;}
 #response .error_message, #response .success_message, #response .notice_message { display: inline-block; padding: 5px 10px; }
 #response .success_message { background: #00cc00; color: #fff; }
