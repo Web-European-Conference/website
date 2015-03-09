@@ -84,6 +84,7 @@
 
             } else {
                 res.status(500).send("Failed to start MailChimp API");
+
             }
             
         });
