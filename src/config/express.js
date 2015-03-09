@@ -53,8 +53,8 @@
         app.use(cookieParser());
 
         logger.debug("Enabling csurf....");
-        var csrf    = require('csurf');
-        app.use(csrf())
+        var csrf = require('csurf');
+        app.use(csrf({ cookie: true }))
 
         logger.debug("Overriding 'Express' logger");
         app.use(require('morgan')({
