@@ -117,7 +117,7 @@
         var $subscribe = $('#subscribe'),
             $response = $('#response'),
             $newsletterEmail = $('#NewsletterEmail'),
-            $csrfToken = $('#csrfToken ');
+            $csrfToken = $('#csrfToken');
 
         $subscribe.on('submit', function (event) {
             event.preventDefault();
