@@ -39,8 +39,8 @@
             extended: true
         }));
 
-        // logger.debug("Enabling validation....");
-        // app.use(expressValidator());
+        logger.debug("Enabling validation....");
+        app.use(expressValidator());
         
         logger.debug("Enabling cookie parser....");
         app.use(cookieParser());
