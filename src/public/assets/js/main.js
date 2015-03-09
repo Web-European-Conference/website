@@ -117,10 +117,17 @@
         var $subscribe = $('#subscribe'),
             $response = $('#response'),
             $newsletterEmail = $('#NewsletterEmail'),
-            $csrfToken = $('#csrfToken ');
+            $csrfToken = $('#csrfToken');
 
         $subscribe.on('submit', function (event) {
             event.preventDefault();
+
+            var payload = {
+                email: $newsletterEmail.val(),
+                _csrf: $csrfToken.val()
+            };
+
+            console.log(payload);
 
             // update user interface
             $response.html('<span class="notice_message">Adding email address...</span>');
@@ -129,10 +136,7 @@
             $.ajax({
                 url: '/api/notify/join',
                 type: 'POST',
-                data: {
-                    email: $newsletterEmail.val(),
-                    _csrf: $csrfToken.val()
-                },
+                data: payload,
                 success: function(data, textStatus, jqXHR) {
                     
                     // show message
@@ -144,7 +148,7 @@
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
 
-                    //console.log(jqXHR, textStatus, errorThrown);
+                    console.log(jqXHR, textStatus, errorThrown);
 
                     if (jqXHR.responseText) {
 
