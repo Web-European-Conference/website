@@ -3,39 +3,15 @@
     var logger = require('../utils/logger');
 
     notifyController.init = function (app) {
-        
-        //
-        //  TEST ENDPOINT (FOR TESTING RESPONSE CODES WITHOUT MAILCHIMP)
-        //  
 
-        // app.post('/api/notify/join', function (req, res) {
-
-        //     // req.assert('email', 'Field required').notEmpty();
-        //     // req.assert('email', 'Invalid email format').isEmail();
-
-        //     // var errors = req.validationErrors();
-
-        //     // res.json(400, errors);
-
-        //     //res.status(400).send("User already subscribed");
-
-        //     //res.status(500).send("Something went wrong. Please try again. " + error);
-
-        //      res.send("Thanks for signing up!");
-
-        // });
-
-        var MailChimpAPI = require('mailchimp').MailChimpAPI;
         var credentials = require("../config/credentials.js").credentials;
+        var mcapi = require('mailchimp-api');
+
         var mailChimpAPI;
 
-        // logger.warn('AAA: ', process.env.MAILCHIMP_KEY);
-        // logger.warn('BBB: ', process.env.MAILCHIMP_LIST_ID);
-
         try {
-            mailChimpAPI = new MailChimpAPI(credentials.mailchimp.key, {
-                version: '2.0'
-            });
+            // set MailChimp API key here
+            mailChimpAPI = new mcapi.Mailchimp(credentials.mailchimp.key);
         } catch (error) {
             logger.error(error.message);
         }
@@ -56,41 +32,44 @@
 
             if (mailChimpAPI) {
 
-                mailChimpAPI.lists_subscribe({
-                    id: credentials.mailchimp.listId,
-                    email: {
-                        email: req.body.email
-                    }
-                }, function (error, data) {
-
-                    if (error) {
-
-                        if (error.code == 214) {
-                            logger.debug("User already subscribed");
-                            res.status(400).send({
-                                error: "User already subscribed"
-                            });
-                        } else {
-                            logger.error("There is an error calling MailChimp: " + error);
-                            res.status(500).send({
-                                error: "Something went wrong. Please try again. " + error
-                            });
+                mailChimpAPI.lists.subscribe({
+                        id: credentials.mailchimp.listId,
+                        email: {
+                            email: req.body.email
                         }
-                    } else {
+                    }, function (data) {
                         logger.debug(data);
                         res.send({
                             message: "Thanks for signing up!"
                         });
-                    }
-                });
+                    },
+                    function (error, data) {
 
+                        if (error) {
+
+                            if (error.code == 214) {
+                                logger.debug("User already subscribed");
+                                res.status(400).send({
+                                    error: "User already subscribed"
+                                });
+                            } else {
+                                logger.error("There is an error calling MailChimp: " + error);
+                                res.status(500).send({
+                                    error: "Something went wrong. Please try again. " + error
+                                });
+                            }
+                        } else {
+                            logger.debug(data);
+                            res.send({
+                                message: "Thanks for signing up!"
+                            });
+                        }
+                    });
             } else {
                 res.status(500).send({
                     error: "Failed to start MailChimp API"
                 });
-
             }
-            
         });
 
 

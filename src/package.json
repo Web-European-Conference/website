@@ -28,6 +28,7 @@
     "express-session": "^1.7.6",
     "express-validator": "^2.3.0",
     "mailchimp": "^1.1.0",
+    "mailchimp-api": "^2.0.7",
     "morgan": "^1.1.1",
     "underscore": "^1.6.0",
     "vash": "^0.7.12-1",
