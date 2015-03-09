@@ -127,7 +127,7 @@
                 _csrf: $csrfToken.val()
             };
 
-            console.log(payload);
+            // console.log(payload);
 
             // update user interface
             $response.html('<span class="notice_message">Adding email address...</span>');
@@ -148,7 +148,7 @@
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
 
-                    console.log(jqXHR, textStatus, errorThrown);
+                    // console.log(jqXHR, textStatus, errorThrown);
 
                     if (jqXHR.responseText) {
 
