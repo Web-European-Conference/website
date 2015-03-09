@@ -25,6 +25,21 @@
 
         // });
 
+        var MailChimpAPI = require('mailchimp').MailChimpAPI;
+        var credentials = require("../config/credentials.js").credentials;
+        var mailChimpAPI;
+
+        // logger.warn('AAA: ', process.env.MAILCHIMP_KEY);
+        // logger.warn('BBB: ', process.env.MAILCHIMP_LIST_ID);
+
+        try {
+            mailChimpAPI = new MailChimpAPI(credentials.mailchimp.key, {
+                version: '2.0'
+            });
+        } catch (error) {
+            logger.error(error.message);
+        }
+
         app.post('/api/notify/join', function (req, res) {
 
             logger.debug('email value: ' + req.body.email);
@@ -40,14 +55,7 @@
                 res.json(400, errors);
             }
 
-            var MailChimpAPI = require('mailchimp').MailChimpAPI;
-
-            var credentials = require("../config/credentials.js").credentials;
-
-            try {
-                var mailChimpAPI = new MailChimpAPI(credentials.mailchimp.key, {
-                    version: '2.0'
-                });
+            if (mailChimpAPI) {
 
                 mailChimpAPI.lists_subscribe({
                     id: credentials.mailchimp.listId,
@@ -55,6 +63,10 @@
                         email: req.body.email
                     }
                 }, function (error, data) {
+
+                    logger.debug(error);
+                    logger.debug(data);
+
                     if (error) {
 
                         if (error.code == 214) {
@@ -70,9 +82,10 @@
                     }
                 });
 
-            } catch (error) {
-                logger.error(error.message);
+            } else {
+                res.status(500).send("Failed to start MailChimp API");
             }
+            
         });
 
 
