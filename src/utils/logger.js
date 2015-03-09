@@ -8,7 +8,7 @@ if(GLOBAL.env != 'dev')
   logger = new winston.Logger({
       transports: [
           new winston.transports.File({
-              level: 'info',
+              level: 'debug',
               filename: './public/logs/all-logs.log',
               handleExceptions: true,
               json: true,
