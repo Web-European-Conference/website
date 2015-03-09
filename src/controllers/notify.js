@@ -72,6 +72,7 @@
 
             } catch (error) {
                 logger.error(error.message);
+                res.status(500).send("Something goes wrong");
             }
         });
 
