@@ -41,6 +41,9 @@
 
         logger.debug("Enabling validation....");
         app.use(expressValidator());
+        
+        logger.debug("Enabling cookie parser....");
+        app.use(cookieParser());
 
         logger.debug("Enabling session....");
         app.use(session({
@@ -49,17 +52,15 @@
             resave: true
         }));
 
-        logger.debug("Enabling cookie parser....");
-        app.use(cookieParser());
-
-        logger.debug("Enabling csurf....");
-        var csrf = require('csurf');
-        app.use(csrf({ cookie: true }))
-
         logger.debug("Overriding 'Express' logger");
         app.use(require('morgan')({
             "stream": logger.stream
         }));
+        
+        logger.debug("Enabling csurf....");
+        var csrf = require('csurf');
+        app.use(csrf({ cookie: true }))
+
 
         mailer.extend(app, {
             host: credentials.mailer.host,
