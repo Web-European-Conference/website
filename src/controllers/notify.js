@@ -44,16 +44,15 @@
 
             logger.debug('email value: ' + req.body.email);
 
-            req.assert('email', 'Field required').notEmpty();
-            req.assert('email', 'Invalid email format').isEmail();
+            // req.assert('email', 'Field required').notEmpty();
+            // req.assert('email', 'Invalid email format').isEmail();
 
-            var errors = req.validationErrors();
-            var mappedErrors = req.validationErrors(true);
+            // var errors = req.validationErrors();
 
-            if (errors) {
-                logger.warn("Wrong request: ", errors);
-                return res.json(400, errors);
-            }
+            // if (errors) {
+            //     logger.warn("Wrong request: ", errors);
+            //     return res.json(400, errors);
+            // }
 
             if (mailChimpAPI) {
 
@@ -63,9 +62,6 @@
                         email: req.body.email
                     }
                 }, function (error, data) {
-
-                    logger.debug(error);
-                    logger.debug(data);
 
                     if (error) {
 
@@ -106,7 +102,6 @@
             req.assert('email', 'Invalid email format').isEmail();
 
             var errors = req.validationErrors();
-            var mappedErrors = req.validationErrors(true);
 
             if (errors) {
                 logger.warn("Wrong request: ", errors);
