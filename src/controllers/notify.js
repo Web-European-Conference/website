@@ -52,7 +52,7 @@
 
             if (errors) {
                 logger.warn("Wrong request: ", errors);
-                res.json(400, errors);
+                return res.json(400, errors);
             }
 
             if (mailChimpAPI) {
@@ -71,19 +71,27 @@
 
                         if (error.code == 214) {
                             logger.debug("User already subscribed");
-                            res.status(400).send("User already subscribed");
+                            res.status(400).send({
+                                error: "User already subscribed"
+                            });
                         } else {
                             logger.error("There is an error calling MailChimp: " + error);
-                            res.status(500).send("Something went wrong. Please try again. " + error);
+                            res.status(500).send({
+                                error: "Something went wrong. Please try again. " + error
+                            });
                         }
                     } else {
                         logger.debug(data);
-                        res.send("Thanks for signing up!");
+                        res.send({
+                            message: "Thanks for signing up!"
+                        });
                     }
                 });
 
             } else {
-                res.status(500).send("Failed to start MailChimp API");
+                res.status(500).send({
+                    error: "Failed to start MailChimp API"
+                });
 
             }
             
@@ -123,7 +131,9 @@
                     // handle error
                     logger.error(err);
 
-                    res.send(500, 'There was an error sending the email');
+                    res.status(500).send({
+                        error: 'There was an error sending the email'
+                    });
 
                     return;
                 }
@@ -138,14 +148,18 @@
                     // handle error
                     logger.error(err);
 
-                    res.send(500, 'There was an error sending the email');
+                    res.status(500).send({
+                        error: 'There was an error sending the email'
+                    });
 
                     return;
                 }
             });
 
             logger.log('info', 'Email Sent', model);
-            res.send(200, 'Email Sent!');
+            res.status(200).send({
+                message: 'Email Sent!'
+            });
         });
     };
 
