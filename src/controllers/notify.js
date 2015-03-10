@@ -1,7 +1,7 @@
 (function (notifyController) {
     'use strict';
     var logger = require('../utils/logger');
-    var debug = require('express-debug');
+    //var debug = require('express-debug');
 
     notifyController.init = function (app) {
 
@@ -132,7 +132,7 @@
             });
         });
 
-        debug(app, {});
+        //debug(app, {});
     };
 
 })(module.exports);
