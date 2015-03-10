@@ -1,6 +1,7 @@
 (function (notifyController) {
     'use strict';
     var logger = require('../utils/logger');
+    var debug = require('express-debug');
 
     notifyController.init = function (app) {
 
@@ -42,8 +43,7 @@
                         res.send({
                             message: "Thanks for signing up!"
                         });
-                    },
-                    function (error, data) {
+                    }, function (error) {
 
                         if (error) {
 
@@ -58,13 +58,9 @@
                                     error: "Something went wrong. Please try again. " + error
                                 });
                             }
-                        } else {
-                            logger.debug(data);
-                            res.send({
-                                message: "Thanks for signing up!"
-                            });
                         }
                     });
+
             } else {
                 res.status(500).send({
                     error: "Failed to start MailChimp API"
@@ -135,6 +131,8 @@
                 message: 'Email Sent!'
             });
         });
+
+        debug(app, {});
     };
 
 })(module.exports);

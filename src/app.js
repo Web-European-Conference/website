@@ -10,6 +10,8 @@ var env = _.find(process.argv.slice(2), function(arg) {
 
 GLOBAL.env = (env !== undefined) ? env.substr(4, 3) : 'prod';
 
+//console.log(GLOBAL.env);
+
 logger = require("./utils/logger");
 logger.debug("Initializing development configuration.");
 
