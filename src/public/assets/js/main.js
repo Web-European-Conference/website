@@ -148,8 +148,11 @@
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
 
-                    // console.log(jqXHR, textStatus, errorThrown);
+                    //console.log(jqXHR, textStatus, errorThrown);
+                    
+                    $response.html('<span class="error_message">User already subscribed</span>');
 
+                    /*
                     if (jqXHR.responseJSON) {
 
                         if (jQuery.isArray(jqXHR.responseJSON)) {
@@ -168,7 +171,7 @@
                         $response.html('<span class="error_message">' + jqXHR.responseText + '</span>');
 
                     } 
-
+                    */
                 }
             });
         

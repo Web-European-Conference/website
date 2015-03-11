@@ -11,6 +11,8 @@
         var mailChimpAPI;
 
         try {
+            
+            logger.debug("MailChimp API Key: " +credentials.mailchimp.key);
             // set MailChimp API key here
             mailChimpAPI = new mcapi.Mailchimp(credentials.mailchimp.key);
         } catch (error) {
@@ -46,16 +48,15 @@
                     }, function (error) {
 
                         if (error) {
-
                             if (error.code == 214) {
                                 logger.debug("User already subscribed");
                                 res.status(400).send({
                                     error: "User already subscribed"
                                 });
                             } else {
-                                logger.error("There is an error calling MailChimp: " + error);
+                                logger.error("There is an error calling MailChimp: " + error.error );
                                 res.status(500).send({
-                                    error: "Something went wrong. Please try again. " + error
+                                    error: "Something went wrong. Please try again. " + error.error
                                 });
                             }
                         }
