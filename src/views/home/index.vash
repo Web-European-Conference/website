@@ -224,7 +224,7 @@
         <br />
         <br />
         <section class="row">
-          <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="col-md-6 col-sm-6 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
               <div class="img-wrapper">
                 <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
@@ -240,7 +240,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="col-md-6 col-sm-6 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
               <div class="img-wrapper">
                 <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
