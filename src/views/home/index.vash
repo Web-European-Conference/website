@@ -145,7 +145,7 @@
 										</div>-->
 										<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
 											<h6>About the Web European Conference</h6>
-										<p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of <a href="http://2012.webnextconf.eu/">Web.NET European Conference</a>.</p>
+										<p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of Web.NET European Conference<!--<a href="http://2012.webnextconf.eu/"></a>-->.</p>
                                                                                 <p>This year, with help of the university, we decided to do it bigger while keeping it free, so that more people can participate and be part of discussions about the latest trends in web development.</p>
 										<p>The conference is the brainchild of Simone Chiaretta and Ugo Lattanzi, web developer with a passion for experimenting with the latest technologies, adopting the best practices and sharing them with others.</p>
 										</div>
