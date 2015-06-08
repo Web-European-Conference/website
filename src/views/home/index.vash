@@ -227,7 +227,7 @@
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
               <div class="img-wrapper">
-                <img src="/imges/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
+                <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
               </div>
               <div class="name">Scott Hanselman</div>
               <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
@@ -258,6 +258,9 @@
         <!--<div class="btn-wrapper">
           <a href="#" class="btn btn-sm btn-default">See all speakers</a>
         </div>-->
+        <h3>CFP</h3>
+        <div class="sub-title">Do you think you have something you want to share and show at the conferece? The site is not ready yet, but you can start submitting your proposal by forking our proposals' repository and adding yours: <a href="https://github.com/Web-European-Conference/c4p" target="_blank">github.com/Web-European-Conference/c4p</a>
+        </div>
       </div>
     </section>
     <!-- End Speakers Section -->
@@ -282,20 +285,6 @@
         </section>
         <!-- End Newsletter -->
 
-        <!-- Call 4 Paper -->
-        <section id="speakers" class="section light">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span>
-                </div>
-                <h3>CFP</h3>
-                <div class="sub-title">Do you think you have something you want to share and show at the conferece? The site is not ready yet, but you can start submitting your proposal by forking our proposals' repository and adding yours: <a href="https://github.com/Web-European-Conference/c4p" target="_blank">github.com/Web-European-Conference/c4p</a>
-                </div>
-                <br />
-                <br />
-            </div>
-        </section>
-        <!-- End Call 4 Paper -->
 
         <!-- Sponsor -->
         <section class="section dark" id="sponsors">
