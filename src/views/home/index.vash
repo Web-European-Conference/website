@@ -230,7 +230,7 @@
                 <img src="assets/img/speaker/speaker-1.jpg" class="img-responsive img-circle" alt="speaker-1" />
               </div>
               <div class="name">Scott Hanselman</div>
-              <div class="sub">CEO Dropbox</div>
+              <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
               <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, he's written a number of books and spoken in person to almost a half million developers worldwide.</p>
               <div class="social-link">
                 <a href="http://facebook.com/scott.hanselman"><span class="fa fa-facebook"></span></a>
