@@ -110,6 +110,74 @@
 
         //$('.fancybox').fancybox();
 
+        //
+        //  Newsletter Signup
+        //
+
+        var $subscribe = $('#subscribe'),
+            $response = $('#response'),
+            $newsletterEmail = $('#NewsletterEmail'),
+            $csrfToken = $('#csrfToken');
+
+        $subscribe.on('submit', function (event) {
+            event.preventDefault();
+
+            var payload = {
+                email: $newsletterEmail.val(),
+                _csrf: $csrfToken.val()
+            };
+
+            // console.log(payload);
+
+            // update user interface
+            $response.html('<span class="notice_message">Adding email address...</span>');
+             
+            // Prepare query string and send AJAX request
+            $.ajax({
+                url: '/api/notify/join',
+                type: 'POST',
+                data: payload,
+                success: function(data, textStatus, jqXHR) {
+                    
+                    // show message
+                    $response.html('<span class="success_message">' + data.message + '</span>');
+
+                    // clear field
+                    $newsletterEmail.val('');
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    //console.log(jqXHR, textStatus, errorThrown);
+                    
+                    $response.html('<span class="error_message">User already subscribed</span>');
+
+                    /*
+                    if (jqXHR.responseJSON) {
+
+                        if (jQuery.isArray(jqXHR.responseJSON)) {
+                            // output messages
+                            $response.html('<span class="error_message">' + jQuery.map(jqXHR.responseJSON, function (v) {
+                                return v.msg;
+                            }).join(', ') + '</span>');
+                        } else {
+
+                             $response.html('<span class="error_message">' + jqXHR.responseJSON.error + '</span>');
+
+                        }
+
+                    } else if (jqXHR.responseText) {
+
+                        $response.html('<span class="error_message">' + jqXHR.responseText + '</span>');
+
+                    } 
+                    */
+                }
+            });
+        
+            return false;
+        });
+
     });
 
     // ****** GOOGLE MAP *******

@@ -1,8 +1,24 @@
 (function (notifyController) {
     'use strict';
     var logger = require('../utils/logger');
+    //var debug = require('express-debug');
 
     notifyController.init = function (app) {
+
+        var credentials = require("../config/credentials.js").credentials;
+        var mcapi = require('mailchimp-api');
+
+        var mailChimpAPI;
+
+        try {
+            
+            logger.debug("MailChimp API Key: " +credentials.mailchimp.key);
+            // set MailChimp API key here
+            mailChimpAPI = new mcapi.Mailchimp(credentials.mailchimp.key);
+        } catch (error) {
+            logger.error(error.message);
+        }
+
         app.post('/api/notify/join', function (req, res) {
 
             logger.debug('email value: ' + req.body.email);
@@ -11,45 +27,45 @@
             req.assert('email', 'Invalid email format').isEmail();
 
             var errors = req.validationErrors();
-            var mappedErrors = req.validationErrors(true);
 
             if (errors) {
                 logger.warn("Wrong request: ", errors);
-                res.json(400, errors);
+                return res.json(400, errors);
             }
 
-            var MailChimpAPI = require('mailchimp').MailChimpAPI;
+            if (mailChimpAPI) {
 
-            var credentials = require("../config/credentials.js").credentials;
-
-            try {
-                var mailChimpAPI = new MailChimpAPI(credentials.mailchimp.key, {
-                    version: '2.0'
-                });
-
-                mailChimpAPI.lists_subscribe({
-                    id: credentials.mailchimp.listId,
-                    email: {
-                        email: req.body.email
-                    }
-                }, function (error, data) {
-                    if (error) {
-
-                        if (error.code == 214) {
-                            logger.debug("User already subscribed");
-                            res.status(304).send("User already subscribed");
-                        } else {
-                            logger.error("There is an error calling MailChimp: " + error);
-                            res.status(500).send("Something went wrong. Please try again. " + error);
+                mailChimpAPI.lists.subscribe({
+                        id: credentials.mailchimp.listId,
+                        email: {
+                            email: req.body.email
                         }
-                    } else {
+                    }, function (data) {
                         logger.debug(data);
-                        res.send("Thanks for signing up!");
-                    }
-                });
+                        res.send({
+                            message: "Thanks for signing up!"
+                        });
+                    }, function (error) {
 
-            } catch (error) {
-                logger.error(error.message);
+                        if (error) {
+                            if (error.code == 214) {
+                                logger.debug("User already subscribed");
+                                res.status(400).send({
+                                    error: "User already subscribed"
+                                });
+                            } else {
+                                logger.error("There is an error calling MailChimp: " + error.error );
+                                res.status(500).send({
+                                    error: "Something went wrong. Please try again. " + error.error
+                                });
+                            }
+                        }
+                    });
+
+            } else {
+                res.status(500).send({
+                    error: "Failed to start MailChimp API"
+                });
             }
         });
 
@@ -62,7 +78,6 @@
             req.assert('email', 'Invalid email format').isEmail();
 
             var errors = req.validationErrors();
-            var mappedErrors = req.validationErrors(true);
 
             if (errors) {
                 logger.warn("Wrong request: ", errors);
@@ -87,7 +102,9 @@
                     // handle error
                     logger.error(err);
 
-                    res.send(500, 'There was an error sending the email');
+                    res.status(500).send({
+                        error: 'There was an error sending the email'
+                    });
 
                     return;
                 }
@@ -102,15 +119,21 @@
                     // handle error
                     logger.error(err);
 
-                    res.send(500, 'There was an error sending the email');
+                    res.status(500).send({
+                        error: 'There was an error sending the email'
+                    });
 
                     return;
                 }
             });
 
             logger.log('info', 'Email Sent', model);
-            res.send(200, 'Email Sent!');
+            res.status(200).send({
+                message: 'Email Sent!'
+            });
         });
+
+        //debug(app, {});
     };
 
 })(module.exports);
