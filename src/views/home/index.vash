@@ -215,7 +215,7 @@
         <!-- End c4p -->
 
     <!-- Speakers Section -->
-    <section id="speakers" class="section light">
+    <section id="speakers" class="section dark">
       <div class="overlay"></div>
       <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
@@ -227,7 +227,7 @@
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
               <div class="img-wrapper">
-                <img src="assets/img/speaker/speaker-1.jpg" class="img-responsive img-circle" alt="speaker-1" />
+                <img src="assets/img/speaker/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
               </div>
               <div class="name">Scott Hanselman</div>
               <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
@@ -243,7 +243,7 @@
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
               <div class="img-wrapper">
-                <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="speaker-2" />
+                <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
               </div>
               <div class="name">Dino Esposito</div>
               <div class="sub">CTO at Crionet</div>
