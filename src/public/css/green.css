@@ -743,11 +743,14 @@ a{
 #stat, #newsletter{
     background: url("../images/stat-bg.jpg") no-repeat fixed center bottom / cover  rgba(0, 0, 0, 0);
 }
+
+/*
 #speakers {
     background-color: #ececec;
     color: #000;
 
-}
+}*/
+
 #speakers .overlay {
     opacity: 0;
 
