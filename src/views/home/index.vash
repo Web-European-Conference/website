@@ -215,7 +215,7 @@
         <!-- End c4p -->
 
     <!-- Speakers Section -->
-    <section id="speakers" class="section dark">
+    <section id="speakers" class="section light">
       <div class="overlay"></div>
       <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
