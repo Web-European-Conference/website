@@ -9,8 +9,7 @@
     var cookieParser = require('cookie-parser');
     var session = require('express-session');
 
-    expressConfig.init = function(app, express) {
-
+    expressConfig.init = function(app, express) {      
         //setup view engine
         logger.debug("Setting 'Vash' as view engine");
         app.set("view engine", "vash");

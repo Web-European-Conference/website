@@ -1,3 +1,5 @@
+/* global GLOBAL */
+/// <reference path="../typings/express/express.d.ts"/>
 var cluster = require('cluster');
 var logger;
 var _ = require('underscore');

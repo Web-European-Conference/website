@@ -1,5 +1,6 @@
+/// <reference path="../../typings/node/node.d.ts"/>
+
 (function(controllers) {
-    var logger = require("../utils/logger");
     var requires = require("../utils/requireAll");
     var ctrls = requires.requireAll(__dirname + '/');
 
