@@ -1,3 +1,5 @@
+/// <reference path="../../typings/express/express.d.ts"/>
+
 (function(expressConfig) {
 
     var logger = require("../utils/logger");

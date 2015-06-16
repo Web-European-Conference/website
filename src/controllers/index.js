@@ -1,4 +1,5 @@
 /// <reference path="../../typings/node/node.d.ts"/>
+/// <reference path="../../typings/express/express.d.ts"/>
 
 (function(controllers) {
     var requires = require("../utils/requireAll");
