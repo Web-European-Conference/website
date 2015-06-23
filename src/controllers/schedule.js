@@ -1,28 +1,31 @@
 /*
-* @Author: imperugo
-* @Date:   2015-06-23 21:50:13
-* @Last Modified by:   imperugo
-* @Last Modified time: 2015-06-23 21:56:32
-*/
+ * @Author: imperugo
+ * @Date:   2015-06-23 21:50:13
+ * @Last Modified by:   imperugo
+ * @Last Modified time: 2015-06-23 23:38:29
+ */
 
 
-(function (scheduleController) {
+(function(scheduleController) {
 
-	'use strict';
-	var logger = require('../utils/logger');
-	var Q = require('q');
+    'use strict';
+    var logger = require('../utils/logger');
+    var data = require("../data/schedule");
 
-	scheduleController.init = function (app) {
-        app.get("/schedule/getTrackSessions", function (req, res) {
+    scheduleController.init = function(app) {
 
-        	var track = req.query.track;
-
-            res.json ({
-                track: track
+        app.get("/schedule/getTrackSessions", function(req, res) {
+            data.getTrackSessions(req.query.track, function(err, tracks) {
+                if (err) {
+                    res.send(400, err);
+                } else {
+                    res.set("Content-Type", "application/json");
+                    logger.debug(tracks);
+                    res.json(tracks);
+                }
             });
         });
     };
 
 
 })(module.exports);
-
