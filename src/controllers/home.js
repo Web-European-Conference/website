@@ -6,10 +6,11 @@
     homeController.init = function (app) {
 
         var data = require("../data/schedule");
+        var _ = require('underscore');
 
         app.get("/", function (req, res) {
             
-            data.getTrackSessions(req.query.track, function(err, tracks) {
+            data.getTrackSessions(function(err, tracks) {
                 if (err) {
                     res.send(400, err);
                 } else {
