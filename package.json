@@ -24,6 +24,8 @@
     "grunt-nodemon": "^0.2.1"
   },
   "dependencies": {
-    "open": "0.0.5"
+    "mongodb": "^2.0.35",
+    "open": "0.0.5",
+    "q": "^1.4.1"
   }
 }

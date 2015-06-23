@@ -132,8 +132,6 @@
                 message: 'Email Sent!'
             });
         });
-
-        //debug(app, {});
     };
 
 })(module.exports);
