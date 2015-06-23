@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 21:50:13
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-06-23 23:38:29
+ * @Last Modified time: 2015-06-23 23:44:39
  */
 
 
@@ -20,7 +20,6 @@
                     res.send(400, err);
                 } else {
                     res.set("Content-Type", "application/json");
-                    logger.debug(tracks);
                     res.json(tracks);
                 }
             });

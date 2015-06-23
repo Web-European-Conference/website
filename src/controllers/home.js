@@ -4,15 +4,27 @@
 (function (homeController) {
 
     homeController.init = function (app) {
+
+        var data = require("../data/schedule");
+
         app.get("/", function (req, res) {
             
-            res.render("home/index", {
-                applicationName: "Web European Conference",
-                title: "Web European Conference",
-                csrfToken: req.csrfToken(),
-                // embed the livereload script
-                livereload: GLOBAL.env === 'dev'
+            data.getTrackSessions(req.query.track, function(err, tracks) {
+                if (err) {
+                    res.send(400, err);
+                } else {
+                    res.render("home/index", {
+                        applicationName: "Web European Conference",
+                        title: "Web European Conference",
+                        csrfToken: req.csrfToken(),
+                        // embed the livereload script
+                        livereload: GLOBAL.env === 'dev',
+                        tracks: tracks
+                    });
+                }
             });
+
+            
         });
     };
 
