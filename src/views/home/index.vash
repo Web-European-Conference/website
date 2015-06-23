@@ -235,29 +235,33 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active">
                             <div class="panel-group timeline-schedule" id="panelTimelineOne">
-
+                                
+                                @{var index = 0;}
                                 @model.tracks.track1.forEach(function(m)
                                 {
-                                  <div class="panel panel-default">
-                                      <div class="speaker-wrapper">
-                                          @if (m.author.avatarUrl == undefined)
-                                          {
+                                    @{index++}
+                                    <div class="panel panel-default">
+                                        <div class="speaker-wrapper">
+                                        @if (m.author.avatarUrl == undefined)
+                                        {
                                             <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }else{
+                                        }else{
                                             <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }
-                                      </div>
-                                      <div class="panel-heading">
-                                          <div class="panel-title">
-                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
-                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
-                                    @m.title
-                                    <div class="pull-right fa fa-angle-up"></div>
-                                    <div class="pull-right fa fa-angle-down"></div>
-                                  </a>
+                                        }
+                                        </div>
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <div class="time">
+                                                    <i class="fa fa-clock-o"></i> @m.time
+                                                </div>
+                                                <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
+                                                @m.title
+                                                    <div class="pull-right fa fa-angle-up"></div>
+                                                    <div class="pull-right fa fa-angle-down"></div>
+                                                </a>
                                           </div>
                                       </div>
-                                      <div id="itemOne" class="panel-collapse collapse in">
+                                      <div id="item@index" class="panel-collapse collapse">
                                           <div class="panel-body">
                                               <article>
                                                   <p>@m.description</p>
@@ -273,126 +277,135 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="tab-pane fade in active" id="TrackTwo">
+                <div class="tab-pane fade in" id="TrackTwo">
                     <div class="tab-content">
                         <div class="tab-pane fade in active">
-                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+                            <div class="panel-group timeline-schedule" id="panelTimelineTwo">
 
                                 @model.tracks.track2.forEach(function(m)
                                 {
-                                  <div class="panel panel-default">
-                                      <div class="speaker-wrapper">
-                                          @if (m.author.avatarUrl == undefined)
-                                          {
-                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }else{
-                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }
-                                      </div>
-                                      <div class="panel-heading">
-                                          <div class="panel-title">
-                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
-                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
-                                    @m.title
-                                    <div class="pull-right fa fa-angle-up"></div>
-                                    <div class="pull-right fa fa-angle-down"></div>
-                                  </a>
+                                    @{index++}
+                                        <div class="panel panel-default">
+                                            <div class="speaker-wrapper">
+                                            @if (m.author.avatarUrl == undefined)
+                                            {
+                                                <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }else{
+                                                <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }
+                                            </div>
+                                            <div class="panel-heading">
+                                                <div class="panel-title">
+                                                    <div class="time">
+                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                    </div>
+                                                    <a data-toggle="collapse" data-parent="#panelTimelineTwo" href="#item@index" class="collapsed">
+                                                    @m.title
+                                                        <div class="pull-right fa fa-angle-up"></div>
+                                                        <div class="pull-right fa fa-angle-down"></div>
+                                                    </a>
+                                              </div>
+                                          </div>
+                                          <div id="item@index" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                  <article>
+                                                      <p>@m.description</p>
+                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                                  </article>
+                                              </div>
                                           </div>
                                       </div>
-                                      <div id="itemOne" class="panel-collapse collapse in">
-                                          <div class="panel-body">
-                                              <article>
-                                                  <p>@m.description</p>
-                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                              </article>
-                                          </div>
-                                      </div>
-                                  </div>
-                                })
+                                    })
 
                             </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="tab-pane fade in active" id="TrackThree">
+                <div class="tab-pane fade in" id="TrackThree">
                     <div class="tab-content">
                         <div class="tab-pane fade in active">
-                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+                            <div class="panel-group timeline-schedule" id="panelTimelineThree">
 
                                 @model.tracks.track3.forEach(function(m)
                                 {
-                                  <div class="panel panel-default">
-                                      <div class="speaker-wrapper">
-                                          @if (m.author.avatarUrl == undefined)
-                                          {
-                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }else{
-                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }
-                                      </div>
-                                      <div class="panel-heading">
-                                          <div class="panel-title">
-                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
-                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
-                                    @m.title
-                                    <div class="pull-right fa fa-angle-up"></div>
-                                    <div class="pull-right fa fa-angle-down"></div>
-                                  </a>
+                                    @{index++}
+                                        <div class="panel panel-default">
+                                            <div class="speaker-wrapper">
+                                            @if (m.author.avatarUrl == undefined)
+                                            {
+                                                <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }else{
+                                                <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }
+                                            </div>
+                                            <div class="panel-heading">
+                                                <div class="panel-title">
+                                                    <div class="time">
+                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                    </div>
+                                                    <a data-toggle="collapse" data-parent="#panelTimelineThree" href="#item@index" class="collapsed">
+                                                    @m.title
+                                                        <div class="pull-right fa fa-angle-up"></div>
+                                                        <div class="pull-right fa fa-angle-down"></div>
+                                                    </a>
+                                              </div>
+                                          </div>
+                                          <div id="item@index" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                  <article>
+                                                      <p>@m.description</p>
+                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                                  </article>
+                                              </div>
                                           </div>
                                       </div>
-                                      <div id="itemOne" class="panel-collapse collapse in">
-                                          <div class="panel-body">
-                                              <article>
-                                                  <p>@m.description</p>
-                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                              </article>
-                                          </div>
-                                      </div>
-                                  </div>
-                                })
+                                    })
 
                             </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="tab-pane fade in active" id="TrackFour">
+                <div class="tab-pane fade in" id="TrackFour">
                     <div class="tab-content">
                         <div class="tab-pane fade in active">
-                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+                            <div class="panel-group timeline-schedule" id="panelTimelineFour">
 
                                 @model.tracks.track4.forEach(function(m)
                                 {
-                                  <div class="panel panel-default">
-                                      <div class="speaker-wrapper">
-                                          @if (m.author.avatarUrl == undefined)
-                                          {
-                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }else{
-                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-                                          }
-                                      </div>
-                                      <div class="panel-heading">
-                                          <div class="panel-title">
-                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
-                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
-                                    @m.title
-                                    <div class="pull-right fa fa-angle-up"></div>
-                                    <div class="pull-right fa fa-angle-down"></div>
-                                  </a>
+                                    @{index++}
+                                        <div class="panel panel-default">
+                                            <div class="speaker-wrapper">
+                                            @if (m.author.avatarUrl == undefined)
+                                            {
+                                                <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }else{
+                                                <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                            }
+                                            </div>
+                                            <div class="panel-heading">
+                                                <div class="panel-title">
+                                                    <div class="time">
+                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                    </div>
+                                                    <a data-toggle="collapse" data-parent="#panelTimelineFour" href="#item@index" class="collapsed">
+                                                    @m.title
+                                                        <div class="pull-right fa fa-angle-up"></div>
+                                                        <div class="pull-right fa fa-angle-down"></div>
+                                                    </a>
+                                              </div>
+                                          </div>
+                                          <div id="item@index" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                  <article>
+                                                      <p>@m.description</p>
+                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                                  </article>
+                                              </div>
                                           </div>
                                       </div>
-                                      <div id="itemOne" class="panel-collapse collapse in">
-                                          <div class="panel-body">
-                                              <article>
-                                                  <p>@m.description</p>
-                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                              </article>
-                                          </div>
-                                      </div>
-                                  </div>
-                                })
+                                    })
 
                             </div>
                         </div>
