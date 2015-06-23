@@ -1,259 +1,448 @@
-@html.extend('layout', function(model) {
-    @html.block('body', function (model) {
-
-        <section class="light" id="hero" style="height: 1228px;">
-            <div class="container">
-                <div class="home-bg">
-                    <nav class="navigation navigation-social">
-                        <ul class="navigation-bar">
-                            <li>
-                                <a href="https://twitter.com/webnextconf"><span class="fa fa-twitter"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/WebnextConf"><span class="fa fa-facebook"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/Web-European-Conference"><span class="fa fa-github"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://vimeo.com/webeuropeanconference"><span class="fa fa-vimeo-square"></span></a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/100110205841080468535"><span class="fa fa-google-plus"></span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="hero-content text-center ">
-                        <div class="row" style="width: 90%; margin: 0px auto 30px auto;">
-                            <img src="/images/logo.png" width="550" height="204" class="img-responsive" style="display: inline;" />
-                        </div>
-                        <div class="hero-small">
-
-                            <hr><span><span class="fa fa-calendar"></span>September 26, 2015
-                            <div class="sep"></div> <span class="fa fa-map-marker"></span>Universita' degli studi di Milano - Bicocca</span>
-                            <hr>
-                        </div>
-                        <div class="hero-big">Web European
-                            <br>Conference</div>
-                    </div>
+@html.extend('layout', function(model) { @html.block('body', function (model) {
+<section class="light" id="hero" style="height: 1228px;">
+    <div class="container">
+        <div class="home-bg">
+            <nav class="navigation navigation-social">
+                <ul class="navigation-bar">
+                    <li>
+                        <a href="https://twitter.com/webnextconf"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/WebnextConf"><span class="fa fa-facebook"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Web-European-Conference"><span class="fa fa-github"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://vimeo.com/webeuropeanconference"><span class="fa fa-vimeo-square"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/100110205841080468535"><span class="fa fa-google-plus"></span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hero-content text-center ">
+                <div class="row" style="width: 90%; margin: 0px auto 30px auto;">
+                    <img src="/images/logo.png" width="550" height="204" class="img-responsive" style="display: inline;" />
                 </div>
-            </div>
-        </section>
-
-        <!-- Menu -->
-        <header id="header" class="navigation-bar-header light hidden-xs">
-            <div class="container">
-                <nav class="navigation">
-                    <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
-                    <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <ul class="navigation-bar navigation-bar-left">
-                        <li style="margin-right: 10px;"><img src="/images/logo-menu.png" width="162" height="60" />
-                        </li>
-                        <li class="active">
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#schedule">Schedule</a>
-                        </li>
-                        <li>
-                            <a href="#speakers">Speakers</a>
-                        </li>
-                        <li>
-                            <a href="#sponsors">Sponsors</a>
-                        </li>
-                        <li>
-                            <a href="#map">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!-- End Menu -->
-
-        <div class="clearfix"></div>
-
-        <!-- About -->
-        <section id="about" class="section dark">
-            <div class="container">
-                <div class="icon-wrap">
-                    <span class="icon icon-office-10 icon-active"></span>
+                <div class="hero-small">
+                    <hr><span><span class="fa fa-calendar"></span>September 26, 2015
+                    <div class="sep"></div> <span class="fa fa-map-marker"></span>Universita' degli studi di Milano - Bicocca</span>
+                    <hr>
                 </div>
-                <h3>Modern Web development</h3>
-                <div class="sub-title" style="margin-bottom: 80px;">The first European Conference dedicated to the future of Development on all technlogies.
-                    <br />Everything about the newest and coolest framework for building modern web applications and websites:
-                    <br />ASP.NET vNext, node.js, ruby, angular.js and much more.</div>
-                <br />
-                <br />
-						<section class="nav-tabs-simple">
-							<!-- Nav tabs -->
-							<ul class="nav nav-tabs nav-justified">
-								<li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-seo-icons-24"></i> Our Manifesto</a></li>
-								<li><a href="#topics" data-toggle="tab"><i class="icon icon-chat-messages-08"></i> Topics</a></li>
-								<li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
-							</ul>
-
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade in active" id="manifest">
-									<article class="row">
-										<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
-											<img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
-										</div>-->
-										<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-											<h6>What the conference is about</h6>
-							<p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and is going to a more light-weight and simple approach. This is exactly what our conference is about.</p>
-							<ul class="sub-list">
-								<li><i class="icon icon-seo-icons-25"></i> Code Craftsmenship<br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
-								<li><i class="icon icon-education-science-16"></i> Tiny assemblable frameworks<br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
-                                <li><i class="icon icon-seo-icons-28"></i> BYOT<br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
-								<li><i class="icon icon-multimedia-33"></i> Mobile First<br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
-                <li><i class="icon icon-text-hierarchy-03"></i> DevOps<br/>Gone are the days of the big-bang in production: now webapps are deployed automatically, many times a day.</li>
-							</ul>
-						</div>
-									</article>
-								</div>
-								<div class="tab-pane fade" id="topics">
-									<article class="row">
-						<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
-											<h6>What we will talk about</h6>
-							<p>After a plenary session held by a prominent speaker, there will be some parallel tracks split in different rooms so that everyone will be able to attend the sessions that most suit them.</p>
-                                <p>Hereafter a selection of possible topics:</p>
-							<ul class="sub-list">
-				<li><i class="icon icon-seo-icons-02"></i>ASP.NET vNext</li>
+                <div class="hero-big">Web European
+                    <br>Conference</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Menu -->
+<header id="header" class="navigation-bar-header light hidden-xs">
+    <div class="container">
+        <nav class="navigation">
+            <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
+            <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="navigation-bar navigation-bar-left">
+                <li style="margin-right: 10px;"><img src="/images/logo-menu.png" width="162" height="60" />
+                </li>
+                <li class="active">
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#schedule">Schedule</a>
+                </li>
+                <li>
+                    <a href="#speakers">Speakers</a>
+                </li>
+                <li>
+                    <a href="#sponsors">Sponsors</a>
+                </li>
+                <li>
+                    <a href="#map">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- End Menu -->
+<div class="clearfix"></div>
+<!-- About -->
+<section id="about" class="section dark">
+    <div class="container">
+        <div class="icon-wrap">
+            <span class="icon icon-office-10 icon-active"></span>
+        </div>
+        <h3>Modern Web development</h3>
+        <div class="sub-title" style="margin-bottom: 80px;">The first European Conference dedicated to the future of Development on all technlogies.
+            <br />Everything about the newest and coolest framework for building modern web applications and websites:
+            <br />ASP.NET vNext, node.js, ruby, angular.js and much more.</div>
+        <br />
+        <br />
+        <section class="nav-tabs-simple">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#manifest" data-toggle="tab"><i class="icon icon-seo-icons-24"></i> Our Manifesto</a></li>
+                <li><a href="#topics" data-toggle="tab"><i class="icon icon-chat-messages-08"></i> Topics</a></li>
+                <li><a href="#aboutus" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="manifest">
+                    <article class="row">
+                        <!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+                      <img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
+                    </div>-->
+                        <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+                            <h6>What the conference is about</h6>
+                            <p>Modern web development is moving away from all the enterprisey features that used to rule the world of development in the past years, and is going to a more light-weight and simple approach. This is exactly what our conference is about.</p>
+                            <ul class="sub-list">
+                                <li><i class="icon icon-seo-icons-25"></i> Code Craftsmenship
+                                    <br/>Developers are taking back the control over the code they write, how they write it and which tools make them productive.</li>
+                                <li><i class="icon icon-education-science-16"></i> Tiny assemblable frameworks
+                                    <br/>Gone are the huge monolithic frameworks from one vendor: Modern Web Apps are a mix and match of different frameworks, technologies and languages.</li>
+                                <li><i class="icon icon-seo-icons-28"></i> BYOT
+                                    <br/>Bring Your Own Tool: Modern Web Development is about productivity the way you want it, not the way the vendor wants it to be.</li>
+                                <li><i class="icon icon-multimedia-33"></i> Mobile First
+                                    <br/>Web sites are now mostly viewed on mobile devices: web sites and apps must be built with that in mind.</li>
+                                <li><i class="icon icon-text-hierarchy-03"></i> DevOps
+                                    <br/>Gone are the days of the big-bang in production: now webapps are deployed automatically, many times a day.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="tab-pane fade" id="topics">
+                    <article class="row">
+                        <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+                            <h6>What we will talk about</h6>
+                            <p>After a plenary session held by a prominent speaker, there will be some parallel tracks split in different rooms so that everyone will be able to attend the sessions that most suit them.</p>
+                            <p>Hereafter a selection of possible topics:</p>
+                            <ul class="sub-list">
+                                <li><i class="icon icon-seo-icons-02"></i>ASP.NET vNext</li>
                                 <li><i class="icon icon-text-hierarchy-04"></i>Node.js</li>
-				<li><i class="icon icon-seo-icons-07"></i>Ruby</li>
+                                <li><i class="icon icon-seo-icons-07"></i>Ruby</li>
                                 <li><i class="icon icon-ecology-16"></i>Javascript frameworks</li>
                                 <li><i class="icon icon-education-science-20"></i>Best practices for modern web development</li>
                                 <li><i class="icon icon-office-61"></i>Cloud</li>
                                 <li><i class="icon icon-graphic-design-30"></i>Continouos Deployment</li>
-				<li><i class="icon icon-arrows-33"></i>And more...</li>
-							</ul>
-						</div>
-						<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
-											<img class="img-responsive" src="assets/img/about-placeholder-mbp.jpg" alt="placeholder" />
-										</div>-->
-									</article>
-								</div>
-								<div class="tab-pane fade" id="aboutus">
-									<article class="row">
-										<!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
-											<img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
-										</div>-->
-										<div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-											<h6>About the Web European Conference</h6>
-										<p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of Web.NET European Conference<!--<a href="http://2012.webnextconf.eu/"></a>-->.</p>
-                                                                                <p>This year, with help of the university, we decided to do it bigger while keeping it free, so that more people can participate and be part of discussions about the latest trends in web development.</p>
-										<p>The conference is the brainchild of Simone Chiaretta and Ugo Lattanzi, web developer with a passion for experimenting with the latest technologies, adopting the best practices and sharing them with others.</p>
-										</div>
-									</article></div>
-							</div>
-						</section>
-						</div>
-						</section>
-
-        <!--  End About -->
-
-        <!-- Stats -->
-        <section id="stat" class="section light">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="0">
-                            <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
-                            </div>
-                            <div class="stat-info">hours</div>
-                            <p class="small">Get ready to experience an intense day packed with lots of hours of good content, knowledge exchange and fun.</p>
+                                <li><i class="icon icon-arrows-33"></i>And more...</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="500">
-                            <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
-                            </div>
-                            <div class="stat-info">speakers</div>
-                            <p class="small">We are expecting international speakers: the CFP is open now, expect to know more soon.</p>
+                        <!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
+                      <img class="img-responsive" src="assets/img/about-placeholder-mbp.jpg" alt="placeholder" />
+                    </div>-->
+                    </article>
+                </div>
+                <div class="tab-pane fade" id="aboutus">
+                    <article class="row">
+                        <!--<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+                      <img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
+                    </div>-->
+                        <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+                            <h6>About the Web European Conference</h6>
+                            <p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of Web.NET European Conference
+                                <!--<a href="http://2012.webnextconf.eu/"></a>-->.</p>
+                            <p>This year, with help of the university, we decided to do it bigger while keeping it free, so that more people can participate and be part of discussions about the latest trends in web development.</p>
+                            <p>The conference is the brainchild of Simone Chiaretta and Ugo Lattanzi, web developer with a passion for experimenting with the latest technologies, adopting the best practices and sharing them with others.</p>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1000">
-                            <div class="stat"><span class="value" data-from="0" data-to=10>10</span>+</div>
-                            <div class="stat-info">technologies</div>
-                            <p class="small">ASP.NET vNext, AngularJS, Node.js, Ruby, Git, Javascript, and much more: all modern web development technologies will be represented.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1500">
-                            <div class="stat"><span class="value" data-from="0" data-to="4">4</span>
-                            </div>
-                            <div class="stat-info">halls</div>
-                            <p class="small">To provide the best experience, we'll have a big plenary hall and other rooms for the sessions through the day.</p>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
-        <!-- End Stats -->
+    </div>
+</section>
+<!--  End About -->
+<!-- Stats -->
+<section id="stat" class="section light">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="counter animated hiding" data-animation="fadeInDown" data-delay="0">
+                    <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
+                    </div>
+                    <div class="stat-info">hours</div>
+                    <p class="small">Get ready to experience an intense day packed with lots of hours of good content, knowledge exchange and fun.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="counter animated hiding" data-animation="fadeInDown" data-delay="500">
+                    <div class="stat"><span class="value" data-from="0" data-to="20">20</span>
+                    </div>
+                    <div class="stat-info">speakers</div>
+                    <p class="small">We are expecting international speakers: the CFP is open now, expect to know more soon.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1000">
+                    <div class="stat"><span class="value" data-from="0" data-to=10>10</span>+</div>
+                    <div class="stat-info">technologies</div>
+                    <p class="small">ASP.NET vNext, AngularJS, Node.js, Ruby, Git, Javascript, and much more: all modern web development technologies will be represented.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1500">
+                    <div class="stat"><span class="value" data-from="0" data-to="4">4</span>
+                    </div>
+                    <div class="stat-info">halls</div>
+                    <p class="small">To provide the best experience, we'll have a big plenary hall and other rooms for the sessions through the day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Stats -->
+<!-- Schedule Section -->
+<section id="schedule" class="section dark">
+    <div class="container">
+        <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span></div>
+        <h3>Full schedule</h3>
+        <br />
+        <section class="nav-tabs-default hidden-xs">
+            <!-- Parent Nav Tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#TrackOne" data-toggle="tab">
+                        <div class="title">Track 1</div>
+                        <div class="subtitle">Room 1</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#TrackTwo" data-toggle="tab">
+                        <div class="title">Track 2</div>
+                        <div class="subtitle">Room 2</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#TrackThree" data-toggle="tab">
+                        <div class="title">Track 3</div>
+                        <div class="subtitle">Room 3</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#TrackFour" data-toggle="tab">
+                        <div class="title">Track 4</div>
+                        <div class="subtitle">Room 4</div>
+                    </a>
+                </li>
+            </ul>
+            <!-- Parent Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="TrackOne">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active">
+                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
 
-        <!-- c4p -->
-        <section class="section dark" id="schedule">
-            <div class="container">
-                <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span>
+                                @model.tracks.track1.forEach(function(m)
+                                {
+                                  <div class="panel panel-default">
+                                      <div class="speaker-wrapper">
+                                          @if (m.author.avatarUrl == undefined)
+                                          {
+                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }else{
+                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }
+                                      </div>
+                                      <div class="panel-heading">
+                                          <div class="panel-title">
+                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
+                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
+                                    @m.title
+                                    <div class="pull-right fa fa-angle-up"></div>
+                                    <div class="pull-right fa fa-angle-down"></div>
+                                  </a>
+                                          </div>
+                                      </div>
+                                      <div id="itemOne" class="panel-collapse collapse in">
+                                          <div class="panel-body">
+                                              <article>
+                                                  <p>@m.description</p>
+                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                              </article>
+                                          </div>
+                                      </div>
+                                  </div>
+                                })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <h3>Full schedule</h3>
-                <div class="sub-title">The Call for Presenters is still underway, and we expect to have more information around June;
-                    <br/> we will make sure all the sessions will be about developlent tools and practices for modern web development.
-                    <br/> There will be 4 halls, for parallel track, for a total of 18-20 sessions in total.
+                <div class="tab-pane fade in active" id="TrackTwo">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active">
+                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+
+                                @model.tracks.track2.forEach(function(m)
+                                {
+                                  <div class="panel panel-default">
+                                      <div class="speaker-wrapper">
+                                          @if (m.author.avatarUrl == undefined)
+                                          {
+                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }else{
+                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }
+                                      </div>
+                                      <div class="panel-heading">
+                                          <div class="panel-title">
+                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
+                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
+                                    @m.title
+                                    <div class="pull-right fa fa-angle-up"></div>
+                                    <div class="pull-right fa fa-angle-down"></div>
+                                  </a>
+                                          </div>
+                                      </div>
+                                      <div id="itemOne" class="panel-collapse collapse in">
+                                          <div class="panel-body">
+                                              <article>
+                                                  <p>@m.description</p>
+                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                              </article>
+                                          </div>
+                                      </div>
+                                  </div>
+                                })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <br>
-                <br>
+                <div class="tab-pane fade in active" id="TrackThree">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active">
+                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+
+                                @model.tracks.track3.forEach(function(m)
+                                {
+                                  <div class="panel panel-default">
+                                      <div class="speaker-wrapper">
+                                          @if (m.author.avatarUrl == undefined)
+                                          {
+                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }else{
+                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }
+                                      </div>
+                                      <div class="panel-heading">
+                                          <div class="panel-title">
+                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
+                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
+                                    @m.title
+                                    <div class="pull-right fa fa-angle-up"></div>
+                                    <div class="pull-right fa fa-angle-down"></div>
+                                  </a>
+                                          </div>
+                                      </div>
+                                      <div id="itemOne" class="panel-collapse collapse in">
+                                          <div class="panel-body">
+                                              <article>
+                                                  <p>@m.description</p>
+                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                              </article>
+                                          </div>
+                                      </div>
+                                  </div>
+                                })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="tab-pane fade in active" id="TrackFour">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active">
+                            <div class="panel-group timeline-schedule" id="panelTimelineOne">
+
+                                @model.tracks.track4.forEach(function(m)
+                                {
+                                  <div class="panel panel-default">
+                                      <div class="speaker-wrapper">
+                                          @if (m.author.avatarUrl == undefined)
+                                          {
+                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }else{
+                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+                                          }
+                                      </div>
+                                      <div class="panel-heading">
+                                          <div class="panel-title">
+                                              <div class="time"><i class="fa fa-clock-o"></i> @m.time</div>
+                                              <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#itemOne">
+                                    @m.title
+                                    <div class="pull-right fa fa-angle-up"></div>
+                                    <div class="pull-right fa fa-angle-down"></div>
+                                  </a>
+                                          </div>
+                                      </div>
+                                      <div id="itemOne" class="panel-collapse collapse in">
+                                          <div class="panel-body">
+                                              <article>
+                                                  <p>@m.description</p>
+                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                              </article>
+                                          </div>
+                                      </div>
+                                  </div>
+                                })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </section>
-        <!-- End c4p -->
-
-    <!-- Speakers Section -->
-    <section id="speakers" class="section light">
-      <div class="overlay"></div>
-      <div class="container">
+    </div>
+</section>
+<!-- End Schedule Section -->
+<!-- Speakers Section -->
+<section id="speakers" class="section light">
+    <div class="overlay"></div>
+    <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
         <h3>Top speakers</h3>
         <div class="sub-title">Look at our top speakers</div>
         <br />
         <br />
         <section class="row">
-          <div class="col-md-6 col-sm-6 col-xs-6">
-            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
-              <div class="img-wrapper">
-                <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
-              </div>
-              <div class="name">Scott Hanselman</div>
-              <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
-              <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, he's written a number of books and spoken in person to almost a half million developers worldwide.</p>
-              <div class="social-link">
-                <a href="http://facebook.com/scott.hanselman"><span class="fa fa-facebook"></span></a>
-                <a href="http://www.twitter.com/shanselman"><span class="fa fa-twitter"></span></a>
-                <a href="https://plus.google.com/108573066018819777334"><span class="fa fa-google-plus"></span></a>
-              </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                    <div class="img-wrapper">
+                        <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
+                    </div>
+                    <div class="name">Scott Hanselman</div>
+                    <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
+                    <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, he's written a number of books and spoken in person to almost a half million developers worldwide.</p>
+                    <div class="social-link">
+                        <a href="http://facebook.com/scott.hanselman"><span class="fa fa-facebook"></span></a>
+                        <a href="http://www.twitter.com/shanselman"><span class="fa fa-twitter"></span></a>
+                        <a href="https://plus.google.com/108573066018819777334"><span class="fa fa-google-plus"></span></a>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col-md-6 col-sm-6 col-xs-6">
-            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
-              <div class="img-wrapper">
-                <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
-              </div>
-              <div class="name">Dino Esposito</div>
-              <div class="sub">CTO at Crionet</div>
-              <p class="small">Mobile strategist, software architect, trainer, book author, father of a genius or two. Would like to be a tennis player too.</p>
-              <div class="social-link">
-                <a href="https://twitter.com/despos"><span class="fa fa-twitter"></span></a>
-              </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                    <div class="img-wrapper">
+                        <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
+                    </div>
+                    <div class="name">Dino Esposito</div>
+                    <div class="sub">CTO at Crionet</div>
+                    <p class="small">Mobile strategist, software architect, trainer, book author, father of a genius or two. Would like to be a tennis player too.</p>
+                    <div class="social-link">
+                        <a href="https://twitter.com/despos"><span class="fa fa-twitter"></span></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="clearfix visible-xs"></div>
+            <div class="clearfix visible-xs"></div>
         </section>
         <!--<div class="btn-wrapper">
           <a href="#" class="btn btn-sm btn-default">See all speakers</a>
@@ -261,80 +450,74 @@
         <h3>CFP</h3>
         <div class="sub-title">Do you think you have something you want to share and show at the conferece? The site is not ready yet, but you can start submitting your proposal by forking our proposals' repository and adding yours: <a href="https://github.com/Web-European-Conference/c4p" target="_blank">github.com/Web-European-Conference/c4p</a>
         </div>
-      </div>
-    </section>
-    <!-- End Speakers Section -->
-
-        <!-- Newsletter -->
-        <section id="newsletter" class="section dark">
-            <div class="overlay"></div>
-            <div class="container">
-                <article class="article-big animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
-                    <h5>Newsletter <span class="highlight">Signup</span></h5>
-                    <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
-                    <form id="subscribe" class="form" method="post">
-                        <div class="form-group form-inline">
-                            <input type="hidden" id="csrfToken" name="csrfToken" value="@model.csrfToken">
-                            <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" required>
-                            <input type="submit" class="btn btn-xs btn-default" value="Submit">
-                            <span id="response"></span>
-                        </div>
-                    </form>
-                </article>
-            </div>
-        </section>
-        <!-- End Newsletter -->
-
-
-        <!-- Sponsor -->
-        <section class="section dark" id="sponsors">
-            <div class="container">
-                <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span>
+    </div>
+</section>
+<!-- End Speakers Section -->
+<!-- Newsletter -->
+<section id="newsletter" class="section dark">
+    <div class="overlay"></div>
+    <div class="container">
+        <article class="article-big animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
+            <h5>Newsletter <span class="highlight">Signup</span></h5>
+            <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
+            <form id="subscribe" class="form" method="post">
+                <div class="form-group form-inline">
+                    <input type="hidden" id="csrfToken" name="csrfToken" value="@model.csrfToken">
+                    <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" required>
+                    <input type="submit" class="btn btn-xs btn-default" value="Submit">
+                    <span id="response"></span>
                 </div>
-                <h3>Sponsors</h3>
-                <div class="sub-title">All of this wouldn't be possible without the support of these awesome partners</div>
-                <br>
-                <div class="row">
-                    <ul class="list-inline">
-                        <li>
-                            <a target="_blank" href="http://www.greenbubble.it/">
-                                <img alt="Greenbubble" src="/images/sponsor/sponsor-greenbubble.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="http://www.unimib.it/">
-                                <img alt="Universita' degli studi di Milano - Bicocca" src="/images/sponsor/unimib.png">
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="btn-wrapper">
-                        <a class="btn btn-sm btn-primary" href="/files/WEC2015_Sponsorship_Plan.pdf">Become a sponsor</a>
-                    </div>
-                </div>
+            </form>
+        </article>
+    </div>
+</section>
+<!-- End Newsletter -->
+<!-- Sponsor -->
+<section class="section dark" id="sponsors">
+    <div class="container">
+        <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span>
+        </div>
+        <h3>Sponsors</h3>
+        <div class="sub-title">All of this wouldn't be possible without the support of these awesome partners</div>
+        <br>
+        <div class="row">
+            <ul class="list-inline">
+                <li>
+                    <a target="_blank" href="http://www.greenbubble.it/">
+                        <img alt="Greenbubble" src="/images/sponsor/sponsor-greenbubble.png">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.unimib.it/">
+                        <img alt="Universita' degli studi di Milano - Bicocca" src="/images/sponsor/unimib.png">
+                    </a>
+                </li>
+            </ul>
+            <div class="btn-wrapper">
+                <a class="btn btn-sm btn-primary" href="/files/WEC2015_Sponsorship_Plan.pdf">Become a sponsor</a>
             </div>
-        </section>
-        <!-- End Sponsor -->
-
-        <!-- Map -->
-        <section id="map" class="dark">
-            <div id="canvas-map"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
-                        <h3>Location</h3>
-                        <ul itemscope="" itemtype="http://schema.org/PostalAddress">
-                            <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca</li>
-                            <li itemprop="email"><i class="fa fa-envelope highlight"></i><a href="mailto:info@@webnextconf.eu">info@@webnextconf.eu</a></li>
-                            <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
-                                <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
-                                <time itemprop="endDate" datetime="2015-09-26T19:00">19:00</time>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+<!-- End Sponsor -->
+<!-- Map -->
+<section id="map" class="dark">
+    <div id="canvas-map"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
+                <h3>Location</h3>
+                <ul itemscope="" itemtype="http://schema.org/PostalAddress">
+                    <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca</li>
+                    <li itemprop="email"><i class="fa fa-envelope highlight"></i><a href="mailto:info@@webnextconf.eu">info@@webnextconf.eu</a></li>
+                    <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
+                        <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
+                        <time itemprop="endDate" datetime="2015-09-26T19:00">19:00</time>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <!-- End Map -->
-    })
-})
+        </div>
+    </div>
+</section>
+<!-- End Map -->
+}) })
