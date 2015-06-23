@@ -20,7 +20,9 @@
                         csrfToken: req.csrfToken(),
                         // embed the livereload script
                         livereload: GLOBAL.env === 'dev',
-                        tracks: tracks
+                        tracks: _.groupBy(tracks,function(o) {
+                            return o.track;
+                        })
                     });
                 }
             });
