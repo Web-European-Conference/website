@@ -554,16 +554,19 @@ label.error { display: block; }
 
 #loader{
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 64px;
+    height: 64px;
     z-index:9999;
-    top: 46%;
+    top: 50%;
+    left: 50%;
+    margin: -32px 0 0 -32px;
+/*    top: 46%;
     top: -webkit-calc(50% - 6px);
     top: calc(50% - 6px);
     left: 46%;
     left: -webkit-calc(50% - 6px);
     left: calc(50% - 6px);
-    /*
+*/    /*
     border-radius: 12px;
     background-color: #eee;
     -webkit-transform-origin:  50% 50%;
