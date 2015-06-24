@@ -109,6 +109,8 @@ hr.white { border-color: #F3AE9B; }
 .article-big h5 { margin-bottom: 20px; }
 .article-big p { margin-bottom: 20px; }
 
+
+
 /* Content */
 #hero { background: url('../images/header-bg.jpg') center center no-repeat;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; min-height: 500px; position: relative; overflow:hidden;}
 #hero .container { position: static; }
@@ -475,17 +477,37 @@ label.error { display: block; }
 #location-gmap { width:100%; height:650px; }
 #location-gmap img { max-width:none; }
 #location-gmap label { width: auto; display: inline; }
-#map {position: relative; padding:172px 0px;}
+#map {position: relative; padding:172px 0px; height: 700px;}
 .location {background:#fff; padding:20px 25px; z-index: 1;}
 .location ul {list-style:none; padding-left:10px;}
 .location li {margin:25px 0px; font-size: 15pt;}
 .location li  i{padding-right:15px; font-size: 15pt;}
 #canvas-map { position: absolute; height:700px; width:100%; top: 0;right: 0;bottom: 0;left: 0; z-index: 1; }
 
-#footer { padding: 0; }
+#footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 11px;
+    text-align: left;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+}
 #footer .navigation-bar > li a { color: #536371; }
 #footer .navigation-bar > li a:Hover,
 #footer .navigation-bar > li a.active { color: #fe4918; text-decoration: none; }
+
+#footer .left {
+    float: left;
+}
+
+#footer .right {
+    float: right;
+    font-size: 10px;
+}
+
+#footer .clear {
+    clear: both;
+}
 
 @-moz-document url-prefix() { 
     .nav-tabs-simple .nav-tabs li.active:after,
@@ -629,6 +651,8 @@ label.error { display: block; }
 
     .form-register .form-group label { line-height: 30px; margin-top: 15px; text-align: left; } 
     .form-register .form-group { margin-bottom: 10px; }
+
+
 
     #footer .navigation-bar > li { padding-top: 0; padding-bottom: 0; }
     #footer .navigation-bar > li a { padding-left: 10px; padding-right: 10px; font-size: 16px; }
@@ -835,6 +859,12 @@ a{
 .article-big input{
     color: #fff;
     
+}
+
+.inline-img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* TEST RESPONSIVE */

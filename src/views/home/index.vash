@@ -497,12 +497,17 @@
             <ul class="list-inline">
                 <li>
                     <a target="_blank" href="http://www.greenbubble.it/">
-                        <img alt="Greenbubble" src="/images/sponsor/sponsor-greenbubble.png">
+                        <img class="inline-img" alt="Greenbubble" src="/images/sponsor/sponsor-greenbubble.png">
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="http://www.unimib.it/">
-                        <img alt="Universita' degli studi di Milano - Bicocca" src="/images/sponsor/unimib.png">
+                        <img class="inline-img" alt="Universita' degli studi di Milano - Bicocca" src="/images/sponsor/unimib.png">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.refined.io/">
+                        <img class="inline-img" alt="Refined.io" src="/images/sponsor/sponsor-refined.png">
                     </a>
                 </li>
             </ul>
