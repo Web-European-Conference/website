@@ -680,6 +680,10 @@ label.error { display: block; }
     #hero { padding-top: 2%; }
     .navigation-bar > li.featured a { margin-left: 0 }
     .nav-tabs-simple .nav-tabs li a { font-size: 20px; padding: 0; }
+
+    .tablet-clear-left {
+        clear: left;
+    }
 }
 
 /* Tablet device */

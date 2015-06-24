@@ -176,7 +176,7 @@
                     <p class="small">We are expecting international speakers: the CFP is open now, expect to know more soon.</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-3 col-xs-6 tablet-clear-left">
                 <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1000">
                     <div class="stat"><span class="value" data-from="0" data-to=10>10</span>+</div>
                     <div class="stat-info">technologies</div>
