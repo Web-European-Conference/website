@@ -498,24 +498,26 @@
             <ul class="list-inline">
                 <li>
                     <a target="_blank" href="http://www.microsoft.com/it-it/default.aspx">
-                        <img class="inline-img" alt="Refined.io" src="/images/sponsor/microsoft.png">
+                        <img class="inline-img" alt="Microsoft" src="/images/sponsor/microsoft.png">
                     </a>
                 </li>
+            </ul>
+            <ul class="list-inline">
                 <li>
                     <a target="_blank" href="http://www.avanade.com/it-it/home">
-                        <img class="inline-img" alt="Refined.io" src="/images/sponsor/avanade.png">
+                        <img class="inline-img" alt="Avanade" src="/images/sponsor/avanade.png">
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.braintreepayments.com/">
-                        <img class="inline-img" alt="Refined.io" src="/images/sponsor/braintree-dev.png">
+                        <img class="inline-img" alt="Braintree dev" src="/images/sponsor/braintree-dev.png">
                     </a>
                 </li>
             </ul>
             <ul class="list-inline">
                 <li>
                     <a target="_blank" href="https://www.jetbrains.com/">
-                        <img class="inline-img" alt="Refined.io" src="/images/sponsor/jetbrains.png">
+                        <img class="inline-img" alt="jetbrains" src="/images/sponsor/jetbrains.png">
                     </a>
                 </li>
             </ul>
