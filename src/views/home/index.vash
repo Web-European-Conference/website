@@ -470,7 +470,7 @@
     </div>
 </section>
 <!-- End Speakers Section -->
-<!-- Price Section -->
+<!-- Price Section
 <section id="price" class="section dark">
       <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-shopping-02"></span></div>
@@ -478,7 +478,7 @@
         <div class="sub-title">The 4 options to attend the conference</div>
 		<br>
 		<br>
-        <div class="pricing-cols pricing-4-cols">
+        <div class="pricing-cols pricing-3-cols">
           <div class="pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="0">
               <div class="pricing-col-header">
                   <h3 class="pricing-col-header-title">1 day</h3>
@@ -526,7 +526,7 @@
       </div>
       </div>
     </section>
-<!-- End Price Section -->
+ End Price Section -->
 
 <!-- Newsletter -->
 <section id="newsletter" class="section dark">
