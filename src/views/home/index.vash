@@ -490,7 +490,7 @@
               </div>
               <div class="pricing-col-content">
                   <ul>
-                      <li>Free entrance only</li>
+                      <li>Ticket to the conference</li>
                       <li>Bring your own food</li>
                       <li>No T-Shirt</li>
                   </ul>
@@ -501,7 +501,7 @@
               <div class="pricing-ribbon">-20%</div>
               <div class="pricing-col-header">
                   <h3 class="pricing-col-header-title">Full Package</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€27.40</span></h4>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€28</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
@@ -515,7 +515,7 @@
           <div class="pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="0">
               <div class="pricing-col-header">
                   <h3 class="pricing-col-header-title">Lunch only</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€15.10</span></h4>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€15</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
@@ -530,7 +530,7 @@
           <div class="pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="0">
               <div class="pricing-col-header">
                   <h3 class="pricing-col-header-title">T-Shirt only</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€19.20</span></h4>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€19</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
