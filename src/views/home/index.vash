@@ -484,61 +484,61 @@
 
           <div class="pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="0">
               <div class="pricing-col-header">
-                  <h3 class="pricing-col-header-title">1 day</h3>
+                  <h3 class="pricing-col-header-title">Free</h3>
                   <h4 class="pricing-col-header-amount">
-                  <span class="pricing-col-amount">$100</span></h4>
+                  <span class="pricing-col-amount">0€</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
-                      <li>Lorem ipsum is simply</li>
-                      <li>Dummy text of the printing</li>
-                      <li>Typesetting industry</li>
+                      <li>Free entrance only</li>
+                      <li>Bring your own food</li>
+                      <li>No T-Shirt</li>
                   </ul>
-                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+                  <a class="pricing-col-button" href="http://webnextconf.eventbrite.com/">Buy Now</a>
               </div>
           </div>
           <div class="pricing-col pricing-col-featured">
               <div class="pricing-ribbon">-20%</div>
               <div class="pricing-col-header">
-                  <h3 class="pricing-col-header-title">3 days</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$150</span></h4>
+                  <h3 class="pricing-col-header-title">Full Package</h3>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€27.40</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
-                      <li>Lorem ipsum is simply</li>
-                      <li>Dummy text of the printing</li>
-                      <li>Typesetting industry</li>
+                      <li>Get the full experience</li>
+                      <li>Lunch is included</li>
+                      <li>You'll receive commemorative T-Shirt</li>
                   </ul>
-                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+                  <a class="pricing-col-button" href="http://webnextconf.eventbrite.com/">Buy Now</a>
               </div>
           </div>
           <div class="pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="0">
               <div class="pricing-col-header">
-                  <h3 class="pricing-col-header-title">2 days</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4>
+                  <h3 class="pricing-col-header-title">Lunch only</h3>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€15.10</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
-                      <li>Lorem ipsum is simply</li>
-                      <li>Dummy text of the printing</li>
-                      <li>Typesetting industry</li>
+                      <li>Ticket to the conference</li>
+                      <li>Lunch provided</li>
+                      <li>No T-Shirt</li>
                   </ul>
-                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+                  <a class="pricing-col-button" href="http://webnextconf.eventbrite.com/">Buy Now</a>
               </div>
           </div>
 
           <div class="pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="0">
               <div class="pricing-col-header">
-                  <h3 class="pricing-col-header-title">2 days</h3>
-                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4>
+                  <h3 class="pricing-col-header-title">T-Shirt only</h3>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">€19.20</span></h4>
               </div>
               <div class="pricing-col-content">
                   <ul>
-                      <li>Lorem ipsum is simply</li>
-                      <li>Dummy text of the printing</li>
-                      <li>Typesetting industry</li>
+                      <li>Ticket to the conference</li>
+                      <li>Commemorative T-Shirt</li>
+                      <li>No lunch provided</li>
                   </ul>
-                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+                  <a class="pricing-col-button" href="http://webnextconf.eventbrite.com/">Buy Now</a>
               </div>
           </div>
       </div>
