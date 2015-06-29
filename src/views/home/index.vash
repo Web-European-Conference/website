@@ -59,6 +59,9 @@
                     <a href="#speakers">Speakers</a>
                 </li>
                 <li>
+                    <a href="#price">Prices</a>
+                </li>
+                <li>
                     <a href="#sponsors">Sponsors</a>
                 </li>
                 <li>
@@ -467,6 +470,64 @@
     </div>
 </section>
 <!-- End Speakers Section -->
+<!-- Price Section -->
+<section id="price" class="section dark">
+      <div class="container">
+        <div class="icon-wrap"><span class="icon icon-active icon-shopping-02"></span></div>
+        <h3>Pricetable</h3>
+        <div class="sub-title">The 4 options to attend the conference</div>
+		<br>
+		<br>
+        <div class="pricing-cols pricing-4-cols">
+          <div class="pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="0">
+              <div class="pricing-col-header">
+                  <h3 class="pricing-col-header-title">1 day</h3>
+                  <h4 class="pricing-col-header-amount">
+                  <span class="pricing-col-amount">$100</span></h4>
+              </div>
+              <div class="pricing-col-content">
+                  <ul>
+                      <li>Lorem ipsum is simply</li>
+                      <li>Dummy text of the printing</li>
+                      <li>Typesetting industry</li>
+                  </ul>
+                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+              </div>
+          </div>
+          <div class="pricing-col pricing-col-featured">
+              <div class="pricing-ribbon">-20%</div>
+              <div class="pricing-col-header">
+                  <h3 class="pricing-col-header-title">3 days</h3>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$150</span></h4>
+              </div>
+              <div class="pricing-col-content">
+                  <ul>
+                      <li>Lorem ipsum is simply</li>
+                      <li>Dummy text of the printing</li>
+                      <li>Typesetting industry</li>
+                  </ul>
+                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+              </div>
+          </div>
+          <div class="pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="0">
+              <div class="pricing-col-header">
+                  <h3 class="pricing-col-header-title">2 days</h3>
+                  <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4>
+              </div>
+              <div class="pricing-col-content">
+                  <ul>
+                      <li>Lorem ipsum is simply</li>
+                      <li>Dummy text of the printing</li>
+                      <li>Typesetting industry</li>
+                  </ul>
+                  <a class="pricing-col-button" href="register.html">Buy Now</a>
+              </div>
+          </div>
+      </div>
+      </div>
+    </section>
+<!-- End Price Section -->
+
 <!-- Newsletter -->
 <section id="newsletter" class="section dark">
     <div class="overlay"></div>
