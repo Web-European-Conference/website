@@ -32,7 +32,9 @@
                 </div>
                 <div class="hero-big">Web European
                     <br>Conference</div>
-                <a href="#price" id="getTicketsButton" class="btn btn-lg btn-3d"><i class="fa fa-play-circle fa-2x"></i> <span>Get tickets</span></a>
+                <a href="#price" id="getTicketsButton" class="btn btn-lg btn-3d">
+                    <i class="fa fa-play-circle fa-2x"></i> <span>Get tickets</span>
+                </a>
             </div>
         </div>
     </div>
