@@ -22,8 +22,10 @@ ASP.NET vNext, node.js, ruby, angular.js and much more.">
     <link href="/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="/lineicons/font-lineicons.css" rel="stylesheet" type="text/css" />
     <!-- main -->
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/green.css">
     <link href="/css/responsive.css" rel="stylesheet" type="text/css" />
+
     <!--[if lt IE 9]>
     <script src="/assets/js/html5.js"></script>
     <script src="/assets/js/respond.min.js"></script>
