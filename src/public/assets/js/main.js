@@ -1,7 +1,10 @@
-(function () {
+(function() {
 
     // Init global DOM elements, functions and arrays
-    window.app = {el: {}, fn: {}};
+    window.app = {
+        el: {},
+        fn: {}
+    };
     app.el['window'] = $(window);
     app.el['document'] = $(document);
     app.el['back-to-top'] = $('.back-to-top');
@@ -9,7 +12,7 @@
     app.el['loader'] = $('#loader');
     app.el['mask'] = $('#mask');
 
-    app.fn.screenSize = function () {
+    app.fn.screenSize = function() {
         var size, width = app.el['window'].width();
         if (width < 320)
             size = "Not supported";
@@ -30,18 +33,18 @@
 
 
 
-    $(function () {
+    $(function() {
         //Preloader
         app.el['loader'].delay(700).fadeOut();
         app.el['mask'].delay(1200).fadeOut("slow");
 
         // Resized based on screen size
-        app.el['window'].resize(function () {
+        app.el['window'].resize(function() {
             app.fn.screenSize();
         });
 
         // fade in .back-to-top
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if ($(this).scrollTop() > 500) {
                 app.el['back-to-top'].fadeIn();
             } else {
@@ -50,7 +53,7 @@
         });
 
         // scroll body to 0px on click
-        app.el['back-to-top'].click(function () {
+        app.el['back-to-top'].click(function() {
             app.el['html-body'].animate({
                 scrollTop: 0
             }, 1500);
@@ -61,15 +64,16 @@
 
         function heroInit() {
 
-           //alert(jQuery(window).height());
+            //alert(jQuery(window).height());
 
             var hero = jQuery('#hero'),
-                    winHeight = jQuery(window).height(),
-                    heroHeight = winHeight;
+                winHeight = jQuery(window).height(),
+                heroHeight = winHeight;
 
-            hero.css({height: heroHeight + "px"});
-        }
-        ;
+            hero.css({
+                height: heroHeight + "px"
+            });
+        };
 
         jQuery(window).on("resize", heroInit);
         jQuery(document).on("ready", heroInit);
@@ -82,12 +86,12 @@
             easing: 'swing'
         });
 
-        $('.animated').appear(function () {
+        $('.animated').appear(function() {
             var element = $(this);
             var animation = element.data('animation');
             var animationDelay = element.data('delay');
             if (animationDelay) {
-                setTimeout(function () {
+                setTimeout(function() {
                     element.addClass(animation + " visible");
                     element.removeClass('hiding');
                     if (element.hasClass('counter')) {
@@ -101,7 +105,9 @@
                     element.find('.value').countTo();
                 }
             }
-        }, {accY: -150});
+        }, {
+            accY: -150
+        });
 
         $('#header').waypoint('sticky', {
             wrapper: '<div class="sticky-wrapper" />',
@@ -119,7 +125,7 @@
             $newsletterEmail = $('#NewsletterEmail'),
             $csrfToken = $('#csrfToken');
 
-        $subscribe.on('submit', function (event) {
+        $subscribe.on('submit', function(event) {
             event.preventDefault();
 
             var payload = {
@@ -131,14 +137,14 @@
 
             // update user interface
             $response.html('<span class="notice_message">Adding email address...</span>');
-             
+
             // Prepare query string and send AJAX request
             $.ajax({
                 url: '/api/notify/join',
                 type: 'POST',
                 data: payload,
                 success: function(data, textStatus, jqXHR) {
-                    
+
                     // show message
                     $response.html('<span class="success_message">' + data.message + '</span>');
 
@@ -146,10 +152,10 @@
                     $newsletterEmail.val('');
 
                 },
-                error: function (jqXHR, textStatus, errorThrown) {
+                error: function(jqXHR, textStatus, errorThrown) {
 
                     //console.log(jqXHR, textStatus, errorThrown);
-                    
+
                     $response.html('<span class="error_message">User already subscribed</span>');
 
                     /*
@@ -174,7 +180,7 @@
                     */
                 }
             });
-        
+
             return false;
         });
 
@@ -182,35 +188,35 @@
 
     // ****** GOOGLE MAP *******
     var map;
-    var brooklyn = new google.maps.LatLng(45.513699,9.210525);
+    var brooklyn = new google.maps.LatLng(45.513699, 9.210525);
 
     var MY_MAPTYPE_ID = 'custom_style';
 
     function initialize() {
 
-        var featureOpts = [
-            {
-                stylers: [
-                    {saturation: -20},
-                    {lightness: 40},
-                    {visibility: 'simplified'},
-                    {gamma: 0.8},
-                    {weight: 0.4}
-                ]
-            },
-            {
-                elementType: 'labels',
-                stylers: [
-                    {visibility: 'on'}
-                ]
-            },
-            {
-                featureType: 'water',
-                stylers: [
-                    {color: '#dee8ff'}
-                ]
-            }
-        ];
+        var featureOpts = [{
+            stylers: [{
+                saturation: -20
+            }, {
+                lightness: 40
+            }, {
+                visibility: 'simplified'
+            }, {
+                gamma: 0.8
+            }, {
+                weight: 0.4
+            }]
+        }, {
+            elementType: 'labels',
+            stylers: [{
+                visibility: 'on'
+            }]
+        }, {
+            featureType: 'water',
+            stylers: [{
+                color: '#dee8ff'
+            }]
+        }];
 
         var mapOptions = {
             zoom: 14,
@@ -218,7 +224,7 @@
             panControl: false,
             mapTypeControl: false,
             streetViewControl: false,
-            center: new google.maps.LatLng(45.513699,9.210525),
+            center: new google.maps.LatLng(45.513699, 9.210525),
             mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
             },
@@ -227,7 +233,7 @@
 
         map = new google.maps.Map(document.getElementById('canvas-map'), mapOptions);
         var image = 'images/pmarker.png';
-        var myLatLng = new google.maps.LatLng(45.513699,9.210525);
+        var myLatLng = new google.maps.LatLng(45.513699, 9.210525);
         var beachMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
@@ -245,3 +251,7 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 
 })();
+
+function formatDate(data) {
+    alert(data);
+}

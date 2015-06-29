@@ -252,7 +252,7 @@
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <div class="time">
-                                                    <i class="fa fa-clock-o"></i> @m.time
+                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
                                                 </div>
                                                 <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
                                                 @m.title
@@ -266,6 +266,7 @@
                                               <article>
                                                   <p>@m.description</p>
                                                   <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+                                                  <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
                                               </article>
                                           </div>
                                       </div>
@@ -297,7 +298,7 @@
                                             <div class="panel-heading">
                                                 <div class="panel-title">
                                                     <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineTwo" href="#item@index" class="collapsed">
                                                     @m.title
@@ -342,7 +343,7 @@
                                             <div class="panel-heading">
                                                 <div class="panel-title">
                                                     <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineThree" href="#item@index" class="collapsed">
                                                     @m.title
@@ -387,7 +388,7 @@
                                             <div class="panel-heading">
                                                 <div class="panel-title">
                                                     <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @m.time
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineFour" href="#item@index" class="collapsed">
                                                     @m.title
