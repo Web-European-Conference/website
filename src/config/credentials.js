@@ -12,5 +12,8 @@ module.exports.credentials = {
     },
     session: {
         secretPhrase : process.env.SESSION_SECRET_PHRASE || "my secret session phrase"
+    },
+    mongo:{
+        connectionString: process.env.MONGODB_CONNECTION_STRING || "mongodb://<dbuser>:<dbpassword>@ds047632.mongolab.com:47632/dbname"
     }
 };

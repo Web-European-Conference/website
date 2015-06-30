@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concurrent: {
             dev: {
-                tasks: ['nodemon', 'node-inspector', 'watch'],
+                tasks: ['nodemon', 'watch'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -14,16 +14,23 @@ module.exports = function(grunt) {
         },
         nodemon: {
             dev: {
-                script: '../src/app.js',
+                script: 'src/app.js',
                 options: {
                     args: ['env:dev'],
                     nodeArgs: ['--debug'],
                     env: {
                         PORT: port
                     },
-                    ext: 'js,coffee',
-                    watch: ['../src/','gruntfile.js'],
-                    ignore: ['node_modules/**'],
+                    ext: 'js,coffee,vash',
+                    // note - this only watches your node server and gruntfile
+                    watch: [
+                        'src/**/*',
+                        'GruntFile.js'
+                    ],
+                    ignore: [
+                        'node_modules/**',
+                        'src/public/**/*'
+                    ],
                     // omit this property if you aren't serving HTML files and 
                     // don't want to open a browser tab on start
                     callback: function(nodemon) {
@@ -51,11 +58,15 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                livereload: true
+            },
             server: {
                 files: ['.rebooted'],
-                options: {
-                    livereload: true
-                }
+            },
+            frontend: {
+                files: 'src/public/**/*',
+                tasks: ['uglify:js']
             }
         },
         uglify: {
@@ -65,14 +76,15 @@ module.exports = function(grunt) {
             js: {
                 sourceMap: true,
                 files: {
-                    '../src/public/js/combined.min.js': [
-                                            '../src/public/js/vendor/jquery.js', 
-                                            '../src/public/js/foundation.min.js',
-                                            '../src/public/js/countdown.js',
-                                            '../src/public/js/owl-carousel.js',
-                                            '../src/public/js/jquery.backstretch.js',
-                                            '../src/public/js/custom.js'
-                                            ]
+                    // this seems wrong to me! The files don't exist
+                    'src/public/js/combined.min.js': [
+                                            'src/public/js/vendor/jquery.js', 
+                                            'src/public/js/foundation.min.js',
+                                            'src/public/js/countdown.js',
+                                            'src/public/js/owl-carousel.js',
+                                            'src/public/js/jquery.backstretch.js',
+                                            'src/public/js/custom.js'
+                                        ]
                 }
             }
         }
@@ -80,9 +92,10 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-nodemon');
     
     
     grunt.registerTask('build', ['uglify:js']);
-    grunt.registerTask('default', ['nodemon:dev', 'watch:server', 'uglify:js']);
+    grunt.registerTask('default', ['concurrent:dev', 'uglify:js']);
 };

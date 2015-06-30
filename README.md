@@ -12,7 +12,6 @@ $ cd src
 $ npm install
 
 $ cd ..
-$ cd grunt
 
 # Install packages
 $ npm install
@@ -51,7 +50,6 @@ You can also just change the value directly in that file.
 ## Watch & serve ##
 
 ```
-$ cd grunt
 $ grunt
 ```
 is not necessary Start and Stop the web server, Nodemon will monitoring all src folder (*.js)

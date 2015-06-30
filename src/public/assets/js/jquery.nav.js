@@ -62,6 +62,9 @@
 			//Handle clicks on the nav
 			this.$nav.on('click.onePageNav', $.proxy(this.handleClick, this));
 
+			//Handle clicks on the nav
+			$('#getTicketsButton').on('click', $.proxy(this.handleClick, this));
+
 			//Get the section positions
 			this.getPositions();
 

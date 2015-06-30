@@ -1,5 +1,11 @@
 <!-- start footer -->
 <footer id="footer">
-
+    <div class="left"> 
+        A Refined.io Event &copy; 2015.
+    </div>
+    <div class="right">
+        Refined.io Limited is a UK limited company registered in England and Wales (registration no: 9482205)
+    </div>
+    <div class="clear"></div>
 </footer>
 <!-- end footer -->
