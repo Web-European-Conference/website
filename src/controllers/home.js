@@ -10,31 +10,14 @@
 
         app.get("/", function (req, res) {
 
-            //
-            // testing without DB access
-            //
-            // res.render("home/index", {
-            //     applicationName: "Web European Conference",
-            //     title: "Web European Conference",
-            //     csrfToken: req.csrfToken(),
-            //     // embed the livereload script
-            //     livereload: GLOBAL.env === 'dev',
-            //     tracks: {
-            //         track1: [],
-            //         track2: [],
-            //         track3: [],
-            //         track4: []
-            //     }
-            // });
-
             data.getTrackSessions(function(err, tracks) {
                 if (err) {
-                    res.send(400, err);
+                    res.status(400).send(err);
                 } else {
                     res.render("home/index", {
                         applicationName: "Web European Conference",
                         title: "Web European Conference",
-                        csrfToken: req.csrfToken(),
+                        //csrfToken: req.csrfToken(),
                         // embed the livereload script
                         livereload: GLOBAL.env === 'dev',
                         tracks: _.groupBy(tracks,function(o) {

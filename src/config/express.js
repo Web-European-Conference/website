@@ -11,7 +11,7 @@
     var cookieParser = require('cookie-parser');
     var session = require('express-session');
 
-    expressConfig.init = function(app, express) {      
+    expressConfig.init = function(app, express) {
         //setup view engine
         logger.debug("Setting 'Vash' as view engine");
         app.set("view engine", "vash");
@@ -42,7 +42,7 @@
 
         logger.debug("Enabling validation....");
         app.use(expressValidator());
-        
+
         logger.debug("Enabling cookie parser....");
         app.use(cookieParser());
 
@@ -54,15 +54,18 @@
         }));
 
         logger.debug("Overriding 'Express' logger");
-        app.use(require('morgan')({
+        app.use(require('morgan')("combined", {
             "stream": logger.stream
         }));
-        
+
+        /*
         logger.debug("Enabling csurf....");
         var csrf = require('csurf');
-        app.use(csrf({ cookie: true }))
-
-
+        app.use(csrf({
+            cookie: true,
+        }));
+        */
+      
         mailer.extend(app, {
             host: credentials.mailer.host,
             secureConnection: credentials.mailer.secureConnection,
@@ -75,7 +78,7 @@
         });
 
         require("../controllers/").init(app);
-    
+
         /*
         logger.info("Configuring 404 page");
         app.use(function(req, res, next) {
