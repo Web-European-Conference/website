@@ -54,7 +54,7 @@
         }));
 
         logger.debug("Overriding 'Express' logger");
-        app.use(require('morgan')({
+        app.use(require('morgan')("combined",{
             "stream": logger.stream
         }));
         
