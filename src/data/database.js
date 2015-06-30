@@ -2,7 +2,7 @@
 * @Author: imperugo
 * @Date:   2015-06-23 21:50:13
 * @Last Modified by:   imperugo
-* @Last Modified time: 2015-06-23 23:28:08
+* @Last Modified time: 2015-06-30 22:56:57
 */
 
 
@@ -25,6 +25,7 @@
           database = {
             db: db,
             tracks: db.collection("tracks"),
+            votes: db.collection("votes")
           };
           next(null, database);
         }
