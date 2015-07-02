@@ -1,4 +1,15 @@
 @html.extend('layout', function(model) { @html.block('body', function (model) {
+
+<body id="index">
+    <!-- Preloader -->
+    <div id="mask">
+        <div id="loader">
+            <img src="/images/preloader.gif" alt="preloader" />
+        </div>
+    </div>
+    <!--/Preloader -->
+    <header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
+
 <section class="light" id="hero" style="height: 1228px;">
     <div class="container">
         <div class="home-bg">
@@ -438,14 +449,14 @@
         <br />
         <br />
         <section class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
                     <div class="img-wrapper">
                         <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
                     </div>
                     <div class="name">Scott Hanselman</div>
                     <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
-                    <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, he's written a number of books and spoken in person to almost a half million developers worldwide.</p>
+                    <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon.</p>
                     <div class="social-link">
                         <a href="http://facebook.com/scott.hanselman"><span class="fa fa-facebook"></span></a>
                         <a href="http://www.twitter.com/shanselman"><span class="fa fa-twitter"></span></a>
@@ -453,7 +464,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
                     <div class="img-wrapper">
                         <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
@@ -466,6 +478,35 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                    <div class="img-wrapper">
+                        <img src="/images/Tugberk-Ugurlu.jpg" class="img-responsive img-circle" alt="Tugberk Ugurlu" />
+                    </div>
+                    <div class="name">Tugberk Ugurlu</div>
+                    <div class="sub">Software Developer at Red Gate</div>
+                    <p class="small">I am a web guy, Microsoft MVP and software developer specialized mainly on .NET Web technologies.</p>
+                    <div class="social-link">
+                        <a href="https://twitter.com/tourismgeek"><span class="fa fa-twitter"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                    <div class="img-wrapper">
+                        <img src="/images/Rui-Carvalho.jpeg" class="img-responsive img-circle" alt="Rui Carvalho" />
+                    </div>
+                    <div class="name">Rui Carvalho</div>
+                    <div class="sub">Owner at ArtOfNet</div>
+                    <p class="small">Rui Carvalho is a software craftsman with strong experience in .net and web applications.</p>
+                    <div class="social-link">
+                        <a href="https://twitter.com/rhwy"><span class="fa fa-twitter"></span></a>
+                    </div>
+                </div>
+            </div>
+
             <div class="clearfix visible-xs"></div>
         </section>
         <!--<div class="btn-wrapper">
@@ -646,4 +687,6 @@
     </div>
 </section>
 <!-- End Map -->
+@html.include('footer')
+</body>
 }) })
