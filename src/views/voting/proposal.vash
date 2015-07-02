@@ -20,6 +20,7 @@
 									@{var index = 0;}
 									@model.tracks.forEach(function(m)
 	                                {
+	                                	<input type="hidden" value="@m._id" />
 	                                    @{index++}
 	                                    <div class="panel panel-default">
 	                                        <div class="speaker-wrapper">
