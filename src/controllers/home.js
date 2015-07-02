@@ -17,7 +17,7 @@
                     res.render("home/index", {
                         applicationName: "Web European Conference",
                         title: "Web European Conference",
-                        //csrfToken: req.csrfToken(),
+                        csrfToken: req.csrfToken(),
                         // embed the livereload script
                         livereload: GLOBAL.env === 'dev',
                         tracks: _.groupBy(tracks,function(o) {

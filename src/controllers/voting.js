@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 21:50:13
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-01 00:28:22
+ * @Last Modified time: 2015-07-02 14:44:57
  */
 
 
@@ -10,10 +10,29 @@
 
     'use strict';
     var logger = require('../utils/logger');
-    var data = require("../data/voting");
+    var dataVoting = require("../data/voting");
+    var dataTracks = require("../data/schedule");
     var _ = require('underscore');
 
     votingController.init = function(app) {
+
+        app.get("/voting/proposal", function(req,res){
+
+            dataTracks.getTrackSessions(function(err, tracks) {
+                if (err) {
+                    res.status(400).send(err);
+                } else {
+                    res.render("voting/proposal", {
+                        applicationName: "Web European Conference",
+                        title: "Web European Conference",
+                        csrfToken: req.csrfToken(),
+                        // embed the livereload script
+                        livereload: GLOBAL.env === 'dev',
+                        tracks: tracks
+                    });
+                }
+            });
+        });
 
         app.post("/voting/vote/", function(req, res) {
 
@@ -32,7 +51,7 @@
                 return res.json(400, errors);
             }
 
-            data.voteSession(vote, sessionId, function(err, newAverageVote) {
+            dataVoting.voteSession(vote, sessionId, function(err, newAverageVote) {
                 if (err) {
                     res.status(400).send("Failed to add vote to data store");
                 } else {
@@ -43,7 +62,7 @@
         });
 
         app.get("/voting/votes/", function(req, res) {
-            data.getVotes(function(err, results) {
+            dataVoting.getVotes(function(err, results) {
                 if (err) {
                     res.status(400).send("Failed to retrieve votes from data store");
                 } else {

@@ -1,4 +1,15 @@
 @html.extend('layout', function(model) { @html.block('body', function (model) {
+
+<body id="index">
+    <!-- Preloader -->
+    <div id="mask">
+        <div id="loader">
+            <img src="/images/preloader.gif" alt="preloader" />
+        </div>
+    </div>
+    <!--/Preloader -->
+    <header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
+
 <section class="light" id="hero" style="height: 1228px;">
     <div class="container">
         <div class="home-bg">
@@ -646,4 +657,6 @@
     </div>
 </section>
 <!-- End Map -->
+@html.include('footer')
+</body>
 }) })

@@ -58,13 +58,11 @@
             "stream": logger.stream
         }));
 
-        /*
         logger.debug("Enabling csurf....");
         var csrf = require('csurf');
         app.use(csrf({
             cookie: true,
         }));
-        */
       
         mailer.extend(app, {
             host: credentials.mailer.host,
