@@ -27,13 +27,12 @@
 								                        <div class="tab-pane fade in active">
 													
 								                        	<input type="hidden" id="csrfToken" name="csrfToken" value="@model.csrfToken">
-													
+
 														 	<div class="panel-group timeline-schedule" style="padding: 0;">
 																@{var index = 0;}
 																@model.tracks.forEach(function(m)
 								                                {
-								                                <form data-vote>
-								                                	<input type="hidden" name="id" value="@m._id" />
+								                                
 								                                    @{index++}
 								                                    <div class="panel panel-default">
 								                                        <div class="speaker-wrapper">
@@ -63,32 +62,38 @@
 								                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
 								                                                  <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
 
-								                                                  <div class="form-inline">
-								                                                  	
-								                                                  	
-									                                                 
-									                                                  		<select name="vote" class="form-control" style="height: 34px;">
-									                                                  			<option value="">---</option>
-									                                                  			<option value="1">1</option>
-									                                                  			<option value="2">2</option>
-									                                                  			<option value="3">3</option>
-									                                                  			<option value="4">4</option>
-									                                                  			<option value="5">5</option>
-									                                                  			<option value="6">6</option>
-									                                                  			<option value="7">7</option>
-									                                                  			<option value="8">8</option>
-									                                                  			<option value="9">9</option>
-									                                                  			<option value="10">10</option>
-									                                                  		</select>
 
-									                                                  		<button type="submit" class="btn btn-primary">Vote</button>
+								                                                  	<form data-vote id="vote-@m._id.toHexString()">
+								                                						<input type="hidden" name="id" value="@m._id.toHexString()" />
+									                                                  <div class="form-inline">
+									                                                  	
+									                                                  	
+										                                                 
+										                                                  		<select name="vote" class="form-control" style="height: 34px;">
+										                                                  			<option value="">---</option>
+										                                                  			<option value="1">1</option>
+										                                                  			<option value="2">2</option>
+										                                                  			<option value="3">3</option>
+										                                                  			<option value="4">4</option>
+										                                                  			<option value="5">5</option>
+										                                                  			<option value="6">6</option>
+										                                                  			<option value="7">7</option>
+										                                                  			<option value="8">8</option>
+										                                                  			<option value="9">9</option>
+										                                                  			<option value="10">10</option>
+										                                                  		</select>
 
-									                                                 </div>
+										                                                  		<button type="submit" class="btn btn-primary" data-vote-button>Vote</button>
+
+										                                                 </div>
+
+									                                                 </form>
+									                                                 <div style="font-style: italic; color: #999; display: none;" id="voted-@m._id.toHexString()">You've voted!</div>
 								                                              </article>
 								                                          </div>
 								                                      </div>
 								                                  </div>
-								                                  </form>
+								                                  
 								                                })
 								                            </div>
 								                        </div>

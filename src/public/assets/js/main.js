@@ -184,10 +184,27 @@
             return false;
         });
 
+        var votedVal = $.cookie('voted'),
+            votedIds = [];
+
+        if (votedVal) {
+            votedIds = votedVal.split(',');
+        }
+
+        $.each(votedIds, function (i, id) {
+
+            if (id) {
+                $('#vote-' + id).hide();
+                $('#voted-' + id).show();
+            }
+            
+        });
+
         $('form[data-vote]').on('submit', function (event) {
             event.preventDefault();
 
-            var payload = {
+            var self = this,
+                payload = {
                 sessionId: $(this).find('input[name="id"]').val(),
                 vote: $(this).find('select[name="vote"]').val(),
                 _csrf: $csrfToken.val()
@@ -195,20 +212,35 @@
 
             if (payload.sessionId && payload.vote) {
 
+                $(this).find('[data-vote-button]').prop('disabled', true);
+
                 $.ajax('/voting/vote/', {
                     method: 'POST',
                     data: payload,
-                    success: function (data) {
+                    dataType: 'text',
+                    success: function () {
 
-                         var voted = $.cookie('voted').split(',');
+                        var votedVal = $.cookie('voted'),
+                            votedIds = [];
 
-                         voted.push(payload.sessionId);
+                        if (votedVal) {
+                            votedIds = votedVal.split(',');
+                        }
 
-                         $.cookie('voted', voted.join(','), {
+                        votedIds.push(payload.sessionId);
+
+                        $.cookie('voted', votedIds.join(','), {
                             expires: 365,
                             path: '/'
-                         });
+                        });
 
+                        // hide the form
+                        $(self).hide();
+                        $('#voted-' + payload.sessionId).show();
+
+                    },
+                    error: function () {
+                        $(self).find('[data-vote-button]').prop('disabled', false);
                     }
                 });
 
