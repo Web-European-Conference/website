@@ -2,13 +2,14 @@
  * @Author: imperugo
  * @Date:   2015-06-23 22:37:52
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-01 00:29:48
+ * @Last Modified time: 2015-07-02 21:48:00
  */
 
 (function(data) {
 
     'use strict';
     var database = require("./database");
+    var ObjectID = require('mongodb').ObjectID;
 
     data.voteSession = function(vote, sessionId, next) {
         database.getDatabase(function(err, db) {
@@ -17,7 +18,7 @@
             } else {
                 var voteObject = {
                     createAt: new Date(),
-                    sessionId: sessionId,
+                    sessionId: new ObjectID(sessionId),
                     vote: vote
                 };
 
@@ -28,7 +29,7 @@
                         } else {
                             db.votes.aggregate({
                                 $match: {
-                                    "sessionId": sessionId
+                                    "sessionId": new ObjectID(sessionId)
                                 }
                             }, {
                                 $group: {
@@ -58,7 +59,7 @@
             } else {
                 db.votes.aggregate({
                     $match: {
-                        "sessionId": sessionId
+                        "sessionId": new ObjectID(sessionId)
                     }
                 }, {
                     $group: {

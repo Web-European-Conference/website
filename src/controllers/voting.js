@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 21:50:13
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-02 14:44:57
+ * @Last Modified time: 2015-07-02 21:51:01
  */
 
 
@@ -37,7 +37,6 @@
         app.post("/voting/vote/", function(req, res) {
 
             req.assert('sessionId', 'Field required').notEmpty();
-            req.assert('sessionId', 'Invalid session id').isInt();
             req.assert('vote', 'Field required').notEmpty();
             req.assert('vote', 'Invalid vote').isInt();
 
