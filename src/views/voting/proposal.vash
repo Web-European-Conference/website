@@ -17,46 +17,66 @@
 									<br/>
 								</div>
 								<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-									@{var index = 0;}
-									@model.tracks.forEach(function(m)
-	                                {
-	                                	<input type="hidden" value="@m._id" />
-	                                    @{index++}
-	                                    <div class="panel panel-default">
-	                                        <div class="speaker-wrapper">
-	                                        @if (m.author.avatarUrl == undefined)
-	                                        {
-	                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-	                                        }else{
-	                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
-	                                        }
-	                                        </div>
-	                                        <div class="panel-heading">
-	                                            <div class="panel-title">
-	                                                <div class="time">
-	                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
-	                                                </div>
-	                                                <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
-	                                                @m.title
-	                                                    <div class="pull-right fa fa-angle-up"></div>
-	                                                    <div class="pull-right fa fa-angle-down"></div>
-	                                                </a>
-	                                          </div>
-	                                      </div>
-	                                      <div id="item@index" class="panel-collapse collapse">
-	                                          <div class="panel-body">
-	                                              <article>
-	                                                  <p>@m.description</p>
-	                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-	                                                  <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
-	                                              </article>
-	                                          </div>
-	                                      </div>
-	                                  </div>
-	                                })
-									
+
+									<div id="schedule" class="section dark" style="padding: 0;">
+
+										<section class="nav-tabs-default hidden-xs">
+											<div class="tab-content">
+								                <div class="tab-pane fade in active" id="TrackOne">
+								                    <div class="tab-content">
+								                        <div class="tab-pane fade in active">
+													
+														 	<div class="panel-group timeline-schedule" style="padding: 0;">
+																@{var index = 0;}
+																@model.tracks.forEach(function(m)
+								                                {
+								                                	<input type="hidden" value="@m._id" />
+								                                    @{index++}
+								                                    <div class="panel panel-default">
+								                                        <div class="speaker-wrapper">
+								                                        @if (m.author.avatarUrl == undefined)
+								                                        {
+								                                            <img src="/images/blank_avatar.jpg" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+								                                        }else{
+								                                            <img src="@m.author.avatarUrl" class="img-responsive img-circle" alt="@m.author.firstname @m.author.lastname" />
+								                                        }
+								                                        </div>
+								                                        <div class="panel-heading">
+								                                            <div class="panel-title">
+								                                                <div class="time">
+								                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
+								                                                </div>
+								                                                <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
+								                                                @m.title
+								                                                    <div class="pull-right fa fa-angle-up"></div>
+								                                                    <div class="pull-right fa fa-angle-down"></div>
+								                                                </a>
+								                                          </div>
+								                                      </div>
+								                                      <div id="item@index" class="panel-collapse collapse">
+								                                          <div class="panel-body">
+								                                              <article>
+								                                                  <p>@m.description</p>
+								                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
+								                                                  <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+								                                              </article>
+								                                          </div>
+								                                      </div>
+								                                  </div>
+								                                })
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </div>
+								        </section>
+
+									</div>
+
 									<p class="agree-text center">By clicking you agree to our Terms of Service, Privacy Policy.<br>
-									Ventcamp v1.1© All rights reserved.</p>
+										Ventcamp v1.1© All rights reserved.</p>
+
+
 								</div>
 							</div>
 						</div>
