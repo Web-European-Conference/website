@@ -214,6 +214,7 @@
     </div>
 </section>
 <!-- End Stats -->
+@*
 <!-- Schedule Section -->
 <section id="schedule" class="section dark">
     <div class="container">
@@ -437,6 +438,7 @@
     </div>
 </section>
 <!-- End Schedule Section -->
+*@
 <!-- Speakers Section -->
 <section id="speakers" class="section light">
     <div class="overlay"></div>

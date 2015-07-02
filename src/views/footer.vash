@@ -21,6 +21,7 @@
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.nav.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.appear.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.countTo.js"></script>
     <script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
     <script type="text/javascript" src="/assets/js/waypoints-sticky.min.js"></script>

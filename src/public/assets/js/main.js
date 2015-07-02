@@ -184,6 +184,40 @@
             return false;
         });
 
+        $('form[data-vote]').on('submit', function (event) {
+            event.preventDefault();
+
+            var payload = {
+                sessionId: $(this).find('input[name="id"]').val(),
+                vote: $(this).find('select[name="vote"]').val(),
+                _csrf: $csrfToken.val()
+            };
+
+            if (payload.sessionId && payload.vote) {
+
+                $.ajax('/voting/vote/', {
+                    method: 'POST',
+                    data: payload,
+                    success: function (data) {
+
+                         var voted = $.cookie('voted').split(',');
+
+                         voted.push(payload.sessionId);
+
+                         $.cookie('voted', voted.join(','), {
+                            expires: 365,
+                            path: '/'
+                         });
+
+                    }
+                });
+
+            } else {
+                alert('Please choose a score');
+            }
+
+        });
+
     });
 
     // ****** GOOGLE MAP *******
