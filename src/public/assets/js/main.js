@@ -70,9 +70,11 @@
                 winHeight = jQuery(window).height(),
                 heroHeight = winHeight;
 
-            hero.css({
-                height: heroHeight + "px"
-            });
+            if (!hero.hasClass('ignore')) {
+                hero.css({
+                    height: heroHeight + "px"
+                });
+            }
         };
 
         jQuery(window).on("resize", heroInit);
