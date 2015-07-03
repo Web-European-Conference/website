@@ -11,8 +11,8 @@
 			           <div class="container">
 							<div class="row">
 								<div class="col-md-12">
-									<h2>Sign up for <span class="highlight">event</span> now!</h2>
-									<div class="sub-title">and get your tickets emailed to you within 24 hours.</div>
+									<h2>Vote your <span class="highlight">favorite proposal</span> now!</h2>
+									<div class="sub-title">We'll evaluate the session thanks your feedback.</div>
 									<br/>
 									<br/>
 								</div>
@@ -45,9 +45,6 @@
 								                                        </div>
 								                                        <div class="panel-heading">
 								                                            <div class="panel-title">
-								                                                <div class="time">
-								                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
-								                                                </div>
 								                                                <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
 								                                                @m.title
 								                                                    <div class="pull-right fa fa-angle-up"></div>

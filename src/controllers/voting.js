@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 21:50:13
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-02 21:51:01
+ * @Last Modified time: 2015-07-02 22:27:34
  */
 
 
@@ -40,7 +40,7 @@
             req.assert('vote', 'Field required').notEmpty();
             req.assert('vote', 'Invalid vote').isInt();
 
-            var sessionId = parseInt(req.body.sessionId);
+            var sessionId = req.body.sessionId;
             var vote = parseInt(req.body.vote);
 
             var errors = req.validationErrors();
