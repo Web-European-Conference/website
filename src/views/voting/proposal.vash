@@ -4,7 +4,7 @@
 		<body id="index" class="register-page">
 			<header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
 			    <!-- Hero Section -->
-			    <section id="hero" class="light">
+			    <section id="hero" class="light ignore">
 			      <div class="container">
 			        <div class="home-bg">
 			          <div class="text-center ">
