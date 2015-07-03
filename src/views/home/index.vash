@@ -44,7 +44,10 @@
                 <div class="hero-big">Web European
                     <br>Conference</div>
                 <a href="#price" id="getTicketsButton" class="btn btn-lg btn-3d">
-                    <i class="fa fa-play-circle fa-2x"></i> <span>Get tickets</span>
+                      <i class="fa fa-play-circle fa-2x"></i> <span>Get tickets</span>
+                </a>
+                <a href="/voting/proposal" id="voteSessions" class="btn btn-lg btn-3d">
+                      <i class="fa fa-play-circle fa-2x"></i> <span>Vote for your favorite sessions</span>
                 </a>
             </div>
         </div>
