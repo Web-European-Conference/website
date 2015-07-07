@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 22:37:52
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-07 13:28:00
+ * @Last Modified time: 2015-07-07 13:41:07
  */
 
 (function(data) {
@@ -43,48 +43,50 @@
                 next(err, null);
             } else {
 
-                logger.info(sessionId);
-                logger.info(new ObjectID(sessionId).toHexString());
+                db.tracks.findOne({
+                        _id: new ObjectID(sessionId)
+                    },
+                    function(err, session) {
+                        logger.debug(session);
 
-                var session = db.tracks.find({
-                    "_id": new ObjectID(sessionId)
-                });
+                        var voteObject = {
+                            createAt: new Date(),
+                            sessionId: new ObjectID(sessionId),
+                            sessionTitle: session.title,
+                            sessionAuthorName: session.author.firstname,
+                            sessionAuthorLastName: session.author.lastname,
+                            sessionAuthorTwitter: session.author.twitter,
+                            vote: vote
+                        };
 
-                var voteObject = {
-                    createAt: new Date(),
-                    sessionId: new ObjectID(sessionId),
-                    sessionTitle: session.title,
-                    sessionAuthorName: session.author.firstname,
-                    sessionAuthorLastName: session.author.lastname,
-                    sessionAuthorTwitter: session.author.twitter,
-                    vote: vote
-                };
-
-                db.votes
-                    .insert(voteObject, function(err) {
-                        if (err) {
-                            next(err);
-                        } else {
-                            db.votes.aggregate({
-                                $match: {
-                                    "sessionId": new ObjectID(sessionId)
-                                }
-                            }, {
-                                $group: {
-                                    _id: "$sessionId",
-                                    avgQuantity: {
-                                        $avg: "$vote"
-                                    }
-                                }
-                            }, function(err, results) {
+                        db.votes
+                            .insert(voteObject, function(err) {
                                 if (err) {
-                                    next(err, null);
+                                    next(err);
                                 } else {
-                                    next(null, results);
+                                    db.votes.aggregate({
+                                        $match: {
+                                            "sessionId": new ObjectID(sessionId)
+                                        }
+                                    }, {
+                                        $group: {
+                                            _id: "$sessionId",
+                                            avgQuantity: {
+                                                $avg: "$vote"
+                                            }
+                                        }
+                                    }, function(err, results) {
+                                        if (err) {
+                                            next(err, null);
+                                        } else {
+                                            next(null, results);
+                                        }
+                                    });
                                 }
                             });
-                        }
                     });
+
+
             }
         });
     };
