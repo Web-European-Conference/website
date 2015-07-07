@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 22:37:52
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-02 22:25:26
+ * @Last Modified time: 2015-07-07 13:26:08
  */
 
 (function(data) {
@@ -11,6 +11,29 @@
     var database = require("./database");
     var ObjectID = require('mongodb').ObjectID;
     var logger = require('../utils/logger');
+    var _ = require("underscore");
+
+    data.updateVotes = function(next) {
+        database.getDatabase(function(err, db) {
+            db.tracks.find().forEach(function(session) {
+                db.votes.update({
+                    sessionId: new ObjectID(session._id)
+                }, {
+                    $set: {
+                        sessionTitle: session.title,
+                        sessionAuthorName: session.author.firstname,
+                        sessionAuthorLastName: session.author.lastname,
+                        sessionAuthorTwitter: session.author.twitter
+                    }
+                }, {
+                    multi: true
+                });
+
+                logger.info("Updated: " + session.title);
+            });
+        });
+
+    };
 
     data.voteSession = function(vote, sessionId, next) {
         database.getDatabase(function(err, db) {
@@ -21,9 +44,17 @@
                 logger.info(sessionId);
                 logger.info(new ObjectID(sessionId).toHexString());
 
+                var session = db.tracks.find({
+                    "_id": new ObjectID(sessionId)
+                });
+
                 var voteObject = {
                     createAt: new Date(),
                     sessionId: new ObjectID(sessionId),
+                    sessionTitle: session.title,
+                    sessionAuthorName: session.author.firstname,
+                    sessionAuthorLastName: session.author.lastname,
+                    sessionAuthorTwitter: session.author.twitter,
                     vote: vote
                 };
 
