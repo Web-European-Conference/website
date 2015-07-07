@@ -663,6 +663,11 @@
                     </a>
                 </li>
                 <li>
+                    <a target="_blank" href="http://milanojs.com/">
+                        <img class="inline-img" alt="{ Milano JS}" src="/images/sponsor/mijs.png">
+                    </a>
+                </li>
+                <li>
                     <a target="_blank" href="http://www.refined.io/">
                         <img class="inline-img" alt="Refined.io" src="/images/sponsor/refined.png">
                     </a>
