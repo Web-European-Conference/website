@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 22:37:52
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-07 13:26:08
+ * @Last Modified time: 2015-07-07 13:28:00
  */
 
 (function(data) {
@@ -31,6 +31,8 @@
 
                 logger.info("Updated: " + session.title);
             });
+
+            next(null);
         });
 
     };
