@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 21:50:13
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-07-02 22:27:34
+ * @Last Modified time: 2015-07-07 10:09:02
  */
 
 
@@ -15,6 +15,18 @@
     var _ = require('underscore');
 
     votingController.init = function(app) {
+
+        app.get("/voting/votesUpdated", function(req,res){
+            dataVoting.updateVotes(function(err){
+                if (err) {
+                    res.status(400).send(err);
+                } else {
+                    res.status(200).send("Update done!");
+                }
+            });
+            
+            //res.status(200).send("Update done!");
+        });
 
         app.get("/voting/proposal", function(req,res){
 
