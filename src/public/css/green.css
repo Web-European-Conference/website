@@ -470,7 +470,7 @@ label.error { display: block; }
     margin-top: 40px;
 }
 
-#sponsors .list-inline li { /*width: 19%;*/ padding-left: 0; padding-right: 0; }
+#sponsors .list-inline li { /*width: 19%;*/ padding-left: 20px; padding-right: 0; }
 #sponsors .list-inline { margin-bottom:30px;}
 /*#sponsors img{ width: 100%;}*/
 

@@ -626,6 +626,11 @@
                         <img class="inline-img" alt="Microsoft" src="/images/sponsor/microsoft.png">
                     </a>
                 </li>
+                <li>
+                    <a target="_blank" href="https://www.braintreepayments.com/">
+                        <img class="inline-img" alt="Braintree dev" src="/images/sponsor/braintree-dev.png">
+                    </a>
+                </li>
             </ul>
             <ul class="list-inline">
                 <li>
@@ -634,13 +639,13 @@
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.braintreepayments.com/">
-                        <img class="inline-img" alt="Braintree dev" src="/images/sponsor/braintree-dev.png">
+                    <a target="_blank" href="http://www.reply.eu/">
+                        <img class="inline-img" alt="Reply" src="/images/sponsor/reply.jpg">
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="http://www.reply.eu/">
-                        <img class="inline-img" alt="Reply" src="/images/sponsor/reply.jpg">
+                    <a target="_blank" href="http://www.pipeline.it/">
+                        <img class="inline-img" alt="pipeline" src="/images/sponsor/pipeline.jpg">
                     </a>
                 </li>
             </ul>
