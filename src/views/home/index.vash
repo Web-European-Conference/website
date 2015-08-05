@@ -453,6 +453,7 @@
         <br />
 
         <section class="row">
+
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
                     <div class="img-wrapper">
@@ -483,6 +484,8 @@
                 </div>
             </div>
 
+            <div class="clearfix visible-xs"></div>
+
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
                     <div class="img-wrapper">
@@ -511,7 +514,7 @@
                 </div>
             </div>
 
-            <div class="clearfix visible-xs"></div>
+            <div class="clearfix"></div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
@@ -540,6 +543,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="clearfix visible-xs"></div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
@@ -571,7 +576,7 @@
                 </div>
             </div>
 
-            <div class="clearfix visible-xs"></div>
+            <div class="clearfix"></div>
         </section>
         <!--<div class="btn-wrapper">
           <a href="#" class="btn btn-sm btn-default">See all speakers</a>
