@@ -283,6 +283,27 @@ hr.white { border-color: #F3AE9B; }
 .nav-tabs-default .tab-pane .tab-pane { padding: 20px; padding-bottom: 10px; min-height: 100px; }
 .nav-tabs-default .tab-pane .nav-tabs.nav-justified > li > a { padding-left: 15px; padding-right: 15px; }
 
+
+@media (max-width: 767px) {
+  /* fix tabs for mobile */
+
+  .nav-tabs-default > .nav-tabs > li {
+    width: 25%;
+  }
+
+  .nav-tabs-default > .nav-tabs > li > a {
+    padding: 10px !important;
+  }
+
+  .nav-tabs-default > .nav-tabs > li .title {
+    font-size: 14px;
+  }
+
+  .nav-tabs-default > .nav-tabs > li .subtitle {
+    font-size: 10px;
+  }
+}
+
 .nav-tabs-simple .nav-tabs { position: relative; top:0px; margin-bottom: 20px; }
 .nav-tabs-simple .tab-content { position: relative; margin-top: 0px; padding-bottom: 10px; min-height: 700px;}
 .nav-tabs-simple .nav-tabs li { border-bottom:1px solid #cecece; padding-bottom: 40px; text-align: center; }
@@ -441,6 +462,48 @@ label.error { display: block; }
 #schedule .panel .panel-title a.collapsed .fa.fa-angle-up { display: none; }
 #schedule .panel .panel-title a .fa.fa-angle-down { display: none; }
 #schedule .panel .panel-title a .fa.fa-angle-up { display: block; }
+
+@media (max-width: 767px) {
+  /* fix schedule for mobile */
+
+  #schedule .panel-group {
+    padding: 0;
+  }
+
+  #schedule .panel {
+    padding-left: 85px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  #schedule .speaker-wrapper {
+    top: 15px;
+    left: 15px;
+  }
+
+  #schedule .panel .panel-title a {
+    font-size: 18px;
+  }
+
+  #schedule .panel .panel-title a .fa {
+    top: 0;
+  }
+
+  #schedule .panel-group:after {
+    left: 75px;
+  }
+
+  #schedule .author {
+    margin: 0;
+  }
+
+  #schedule .panel-group .panel .panel-body {
+    padding-bottom: 0;
+  }
+}
+
 
 #speakers { background-image: url('../images/sound-wave.jpg'); background-repeat: no-repeat; background-position: center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 #speakers .speaker-item { padding-bottom: 50px; }
