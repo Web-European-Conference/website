@@ -46,9 +46,11 @@
                 <a href="#price" id="getTicketsButton" class="btn btn-lg btn-3d">
                       <i class="fa fa-play-circle fa-2x"></i> <span>Get tickets</span>
                 </a>
+                @*
                 <a href="/voting/proposal" id="voteSessions" class="btn btn-lg btn-3d">
                       <i class="fa fa-play-circle fa-2x"></i> <span>Vote for your favorite sessions</span>
                 </a>
+                *@
             </div>
         </div>
     </div>
@@ -69,11 +71,9 @@
                 <li class="active">
                     <a href="#about">About</a>
                 </li>
-                @*
                 <li>
                     <a href="#schedule">Schedule</a>
                 </li>
-                *@
                 <li>
                     <a href="#speakers">Speakers</a>
                 </li>
@@ -168,7 +168,7 @@
                             <p>The <strong>Web European Conference</strong> is at its second edition, after a successful first edition in 2012 under the name of Web.NET European Conference
                                 <!--<a href="http://2012.webnextconf.eu/"></a>-->.</p>
                             <p>This year, with help of the university, we decided to do it bigger while keeping it free, so that more people can participate and be part of discussions about the latest trends in web development.</p>
-                            <p>The conference is the brainchild of Simone Chiaretta and Ugo Lattanzi, web developer with a passion for experimenting with the latest technologies, adopting the best practices and sharing them with others.</p>
+                            <p>The conference is the brainchild of <strong>Simone Chiaretta</strong>, <strong>Ugo Lattanzi</strong> and <strong>Gianluca Centulani</strong>, web developer with a passion for experimenting with the latest technologies, adopting the best practices and sharing them with others.</p>
                         </div>
                     </article>
                 </div>
@@ -217,7 +217,7 @@
     </div>
 </section>
 <!-- End Stats -->
-@*
+
 <!-- Schedule Section -->
 <section id="schedule" class="section dark">
     <div class="container">
@@ -275,7 +275,7 @@
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <div class="time">
-                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
+                                                    <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@(("0" + data.getMinutes()).substr(-2))
                                                 </div>
                                                 <a data-toggle="collapse" data-parent="#panelTimelineOne" href="#item@index" class="collapsed">
                                                 @m.title
@@ -321,7 +321,7 @@
                                             <div class="panel-heading">
                                                 <div class="panel-title">
                                                     <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@(("0" + data.getMinutes()).substr(-2))
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineTwo" href="#item@index" class="collapsed">
                                                     @m.title
@@ -365,8 +365,8 @@
                                             </div>
                                             <div class="panel-heading">
                                                 <div class="panel-title">
-                                                    <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
+                                                   <div class="time">
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@(("0" + data.getMinutes()).substr(-2))
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineThree" href="#item@index" class="collapsed">
                                                     @m.title
@@ -411,7 +411,7 @@
                                             <div class="panel-heading">
                                                 <div class="panel-title">
                                                     <div class="time">
-                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@data.getMinutes()
+                                                        <i class="fa fa-clock-o"></i> @{ var data = new Date(m.time) } @data.getHours():@(("0" + data.getMinutes()).substr(-2))
                                                     </div>
                                                     <a data-toggle="collapse" data-parent="#panelTimelineFour" href="#item@index" class="collapsed">
                                                     @m.title
@@ -441,7 +441,7 @@
     </div>
 </section>
 <!-- End Schedule Section -->
-*@
+
 <!-- Speakers Section -->
 <section id="speakers" class="section light">
     <div class="overlay"></div>
@@ -487,7 +487,7 @@
             <div class="clearfix visible-xs"></div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
                     <div class="img-wrapper">
                         <img src="/images/Tugberk-Ugurlu.jpg" class="img-responsive img-circle" alt="Tugberk Ugurlu" />
                     </div>
@@ -501,7 +501,7 @@
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1500">
                     <div class="img-wrapper">
                         <img src="/images/Rui-Carvalho.jpeg" class="img-responsive img-circle" alt="Rui Carvalho" />
                     </div>
@@ -531,7 +531,7 @@
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
                     <div class="img-wrapper">
                         <img src="https://avatars1.githubusercontent.com/u/2421741?v=3&s=143" class="img-responsive img-circle" alt="Vito Flavio Lorusso" />
                     </div>
@@ -547,7 +547,7 @@
             <div class="clearfix visible-xs"></div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1500">
                     <div class="img-wrapper">
                         <img src="https://avatars0.githubusercontent.com/u/5183152?v=3&s=143" class="img-responsive img-circle" alt="Raffaele Rialdi" />
                     </div>
@@ -562,7 +562,7 @@
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="2000">
                     <div class="img-wrapper">
                         <img src="https://avatars2.githubusercontent.com/u/7922748?v=3&s=143" class="img-responsive img-circle" alt="Kuba Walinski" />
                     </div>
