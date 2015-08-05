@@ -224,7 +224,7 @@
         <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span></div>
         <h3>Full schedule</h3>
         <br />
-        <section class="nav-tabs-default hidden-xs">
+        <section class="nav-tabs-default">
             <!-- Parent Nav Tabs -->
             <ul class="nav nav-tabs">
                 <li class="active">
