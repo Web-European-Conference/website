@@ -288,8 +288,27 @@
                                           <div class="panel-body">
                                               <article>
                                                   <p>@m.description</p>
-                                                  <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                                  <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+
+                                                    @if(m.author.firstname != "" && m.author.firstname != undefined)
+                                                    {
+                                                        <p class="author">
+
+                                                            @{var url = (m.author.blog != "" && m.author.blog != undefined) ? m.author.blog : "http://twitter.com/" + m.author.twitter;}
+                                                            <a href="@url" target="_blank">
+                                                                <strong>
+                                                                    <i class="fa fa-user"></i> 
+                                                                    @m.author.firstname @m.author.lastname
+                                                                </strong>
+                                                            </a>
+                                                        </p>
+                                                    }
+
+                                                  
+                                                  
+                                                    @if(m.tags.length > 0){
+                                                        <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+                                                    }
+                                                  
                                               </article>
                                           </div>
                                       </div>
@@ -332,10 +351,29 @@
                                           </div>
                                           <div id="item@index" class="panel-collapse collapse">
                                               <div class="panel-body">
-                                                  <article>
+                                                    <article>
                                                       <p>@m.description</p>
-                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                                  </article>
+
+                                                        @if(m.author.firstname != "" && m.author.firstname != undefined)
+                                                        {
+                                                            <p class="author">
+                                                                @{var url = (m.author.blog != "" && m.author.blog != undefined) ? m.author.blog : "http://twitter.com/" + m.author.twitter;}
+                                                                <a href="@url" target="_blank">
+                                                                    <strong>
+                                                                        <i class="fa fa-user"></i> 
+                                                                        @m.author.firstname @m.author.lastname
+                                                                    </strong>
+                                                                </a>
+                                                            </p>
+                                                        }
+
+                                                      
+                                                      
+                                                        @if(m.tags.length > 0){
+                                                            <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+                                                        }
+                                                      
+                                                    </article>
                                               </div>
                                           </div>
                                       </div>
@@ -377,10 +415,29 @@
                                           </div>
                                           <div id="item@index" class="panel-collapse collapse">
                                               <div class="panel-body">
-                                                  <article>
+                                                    <article>
                                                       <p>@m.description</p>
-                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                                  </article>
+
+                                                        @if(m.author.firstname != "" && m.author.firstname != undefined)
+                                                        {
+                                                            <p class="author">
+                                                                @{var url = (m.author.blog != "" && m.author.blog != undefined) ? m.author.blog : "http://twitter.com/" + m.author.twitter;}
+                                                                <a href="@url" target="_blank">
+                                                                    <strong>
+                                                                        <i class="fa fa-user"></i> 
+                                                                        @m.author.firstname @m.author.lastname
+                                                                    </strong>
+                                                                </a>
+                                                            </p>
+                                                        }
+
+                                                      
+                                                      
+                                                        @if(m.tags.length > 0){
+                                                            <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+                                                        }
+                                                      
+                                                    </article>
                                               </div>
                                           </div>
                                       </div>
@@ -422,10 +479,29 @@
                                           </div>
                                           <div id="item@index" class="panel-collapse collapse">
                                               <div class="panel-body">
-                                                  <article>
+                                                    <article>
                                                       <p>@m.description</p>
-                                                      <p class="author"><a href="@m.author.blog"><strong><i class="fa fa-user"></i> @m.author.firstname @m.author.lastname</strong></a></p>
-                                                  </article>
+
+                                                        @if(m.author.firstname != "" && m.author.firstname != undefined)
+                                                        {
+                                                            <p class="author">
+                                                                @{var url = (m.author.blog != "" && m.author.blog != undefined) ? m.author.blog : "http://twitter.com/" + m.author.twitter;}
+                                                                <a href="@url" target="_blank">
+                                                                    <strong>
+                                                                        <i class="fa fa-user"></i> 
+                                                                        @m.author.firstname @m.author.lastname
+                                                                    </strong>
+                                                                </a>
+                                                            </p>
+                                                        }
+
+                                                      
+                                                      
+                                                        @if(m.tags.length > 0){
+                                                            <p class="tags"><strong><i class="fa fa-tags"></i> @m.tags</strong></p>
+                                                        }
+                                                      
+                                                    </article>
                                               </div>
                                           </div>
                                       </div>
