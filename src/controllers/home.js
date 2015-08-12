@@ -1,34 +1,81 @@
 /* global GLOBAL */
 /// <reference path="../../typings/express/express.d.ts"/>
 
-(function (homeController) {
+(function(homeController) {
+    var logger = require("../utils/logger.js");
+    var Q = require("Q");
 
-    homeController.init = function (app) {
+    homeController.init = function(app) {
 
-        var data = require("../data/schedule");
-        var _ = require('underscore');
+        app.get("/", function(req, res) {
 
-        app.get("/", function (req, res) {
+            var model = {
+                applicationName: "Web European Conference",
+                title: "Web European Conference",
+                csrfToken: req.csrfToken(),
+                // embed the livereload script
+                livereload: GLOBAL.env === 'dev',
+            };
 
-            data.getTrackSessions(function(err, tracks) {
-                if (err) {
-                    res.status(400).send(err);
-                } else {
-                    res.render("home/index", {
-                        applicationName: "Web European Conference",
-                        title: "Web European Conference",
-                        csrfToken: req.csrfToken(),
-                        // embed the livereload script
-                        livereload: GLOBAL.env === 'dev',
-                        tracks: _.groupBy(tracks,function(o) {
-                            return o.track;
-                        })
-                    });
-                }
+
+            homeController.populateModelWithSessions(model)
+            .then(homeController.populateModelWithSpeakers(model))
+                .catch(function(err) {
+                    logger.error("error " + err);
+                    
+                    res.status(400)
+                        .send(err);
+                })
+                .done(function(){
+                    logger.debug("rendering view .....");
+
+                    res.render("home/index", model);
+                });
+        });
+
+    };
+
+    homeController.populateModelWithSpeakers = function(model) {
+        var deferred = Q.defer();
+        var speakers = require("../data/speakers");
+
+        speakers.getSpeakers()
+            .then(function(data) {
+                logger.debug("assigning speakers to model....");
+                model.speakers = data;
+            })
+            .catch(function(err) {
+                deferred.reject(new Error(err));
+            })
+            .done(function(){
+                deferred.resolve(model);
             });
 
-
-        });
+        return deferred.promise;
     };
+
+    homeController.populateModelWithSessions = function(model) {
+        
+        var schedule = require("../data/schedule");
+        var _ = require('underscore');
+        var deferred = Q.defer();
+
+        schedule.getTrackSessions()
+            .then(function(data) {
+                logger.debug("assigning tracks to model....");
+                model.tracks = _.groupBy(data, function(o) {
+                    return o.track;
+                });
+            })
+            .catch(function(err) {
+                deferred.reject(new Error(err));
+            })
+            .done(function(){
+                deferred.resolve(model);
+            });
+
+        return deferred.promise;
+    };
+
 
 })(module.exports);

@@ -2,7 +2,7 @@
  * @Author: imperugo
  * @Date:   2015-06-23 22:37:52
  * @Last Modified by:   imperugo
- * @Last Modified time: 2015-08-12 23:26:36
+ * @Last Modified time: 2015-08-13 00:12:14
  */
 
 (function(data) {
@@ -12,18 +12,16 @@
     var logger = require("../utils/logger.js");
     var Q = require("Q");
 
-
-    data.getTrackSessions = function() {
+    data.getSpeakers = function() {
         var deferred = Q.defer();
 
         database.getDatabase()
             .then(function(db) {
-                logger.debug("reading tracks .....");
-                db.tracks
+                logger.debug("reading speakers .....");
+
+                db.speakers
                     .find()
-                    .sort({
-                        "time": 1
-                    })
+                    .sort({"order":1})
                     .toArray(function(err, results) {
                         if (err) {
                             deferred.reject(new Error(err));

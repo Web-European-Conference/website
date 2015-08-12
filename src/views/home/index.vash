@@ -524,128 +524,37 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
-        <h3>Top speakers</h3>
+        <h3>Our speakers</h3>
         <div class="sub-title">Look at our top speakers</div>
         <br />
         <br />
 
         <section class="speakers-carousel">
             <div id="speakers-carousel">
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
-                        <div class="img-wrapper">
-                            <img src="/images/scott-hanselman.jpg" class="img-responsive img-circle" alt="Scott Hanselman" />
-                        </div>
-                        <div class="name">Scott Hanselman</div>
-                        <div class="sub">Principal Community Architect - Microsoft Web Platform</div>
-                        <p class="small">Works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon.</p>
-                        <div class="social-link">
-                            <a href="http://facebook.com/scott.hanselman"><span class="fa fa-facebook"></span></a>
-                            <a href="http://www.twitter.com/shanselman"><span class="fa fa-twitter"></span></a>
-                            <a href="https://plus.google.com/108573066018819777334"><span class="fa fa-google-plus"></span></a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
-                        <div class="img-wrapper">
-                            <img src="/images/dino-esposito.jpg" class="img-responsive img-circle" alt="Dino Esposito" />
-                        </div>
-                        <div class="name">Dino Esposito</div>
-                        <div class="sub">CTO at Crionet</div>
-                        <p class="small">Mobile strategist, software architect, trainer, book author, father of a genius or two. Would like to be a tennis player too.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/despos"><span class="fa fa-twitter"></span></a>
+                @model.speakers.forEach(function(m)
+                {
+                    <div class="speaker-item-container">
+                        <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                            <div class="img-wrapper">
+                                <img src="@m.avatarUrl" class="img-responsive img-circle" alt="Scott Hanselman" width="142" height="142" />
+                            </div>
+                            <div class="name">@m.firstname @m.lastname</div>
+                            <div class="sub">@m.role</div>
+                            <p class="small">@m.bio</p>
+                            <div class="social-link">
+                                @if(m.twitter && m.twitter != ""){
+                                    <a href="http://www.twitter.com/@m.twitter"><span class="fa fa-twitter"></span></a>
+                                }
+                                @if(m.site && m.site != ""){
+                                    <a href="@m.site"><span class="fa fa-link"></span></a>
+                                }
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
+                })
 
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                        <div class="img-wrapper">
-                            <img src="/images/Tugberk-Ugurlu.jpg" class="img-responsive img-circle" alt="Tugberk Ugurlu" />
-                        </div>
-                        <div class="name">Tugberk Ugurlu</div>
-                        <div class="sub">Software Developer at Red Gate</div>
-                        <p class="small">I am a web guy, Microsoft MVP and software developer specialized mainly on .NET Web technologies.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/tourismgeek"><span class="fa fa-twitter"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1500">
-                        <div class="img-wrapper">
-                            <img src="/images/Rui-Carvalho.jpeg" class="img-responsive img-circle" alt="Rui Carvalho" />
-                        </div>
-                        <div class="name">Rui Carvalho</div>
-                        <div class="sub">Owner at ArtOfNet</div>
-                        <p class="small">Rui Carvalho is a software craftsman with strong experience in .net and web applications.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/rhwy"><span class="fa fa-twitter"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
-                        <div class="img-wrapper">
-                            <img src="https://avatars0.githubusercontent.com/u/485230?v=3&s=143" class="img-responsive img-circle" alt="Maarten Balliauw" />
-                        </div>
-                        <div class="name">Maarten Balliauw</div>
-                        <div class="sub">Founder of http://MyGet.org </div>
-                        <p class="small">Maarten Balliauw works at Microsoft. His interests are mainly web applications developed in ASP.NET (C#) or PHP and the Microsoft Azure cloud platform. Maarten also co-founded MyGet, hosting private NuGet, npm and Bower feeds for teams.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/maartenballiauw"><span class="fa fa-twitter"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                        <div class="img-wrapper">
-                            <img src="https://avatars1.githubusercontent.com/u/2421741?v=3&s=143" class="img-responsive img-circle" alt="Vito Flavio Lorusso" />
-                        </div>
-                        <div class="name">Vito Flavio Lorusso</div>
-                        <div class="sub">Senior Program Manager in Microsoft</div>
-                        <p class="small">I am a Senior Program Manager in Microsoft working on Cloud Tecnologies since 4 years. My curent job is being a Tech Advisor and Cloud Architect for cloud workloads enablers and worldwide video projects on Microsoft Azure.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/vflorusso"><span class="fa fa-twitter"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1500">
-                        <div class="img-wrapper">
-                            <img src="https://avatars0.githubusercontent.com/u/5183152?v=3&s=143" class="img-responsive img-circle" alt="Raffaele Rialdi" />
-                        </div>
-                        <div class="name">Raffaele Rialdi</div>
-                        <div class="sub">Software Architect</div>
-                        <p class="small">Raffaele Rialdi is a senior Software Architect working as a consultant, speaker and trainer. Since 2003, he is a Microsoft MVP in the Developer Security category.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/raffaeler"><span class="fa fa-twitter"></span></a>
-                            <a href="http://iamraf.net"><span class="fa fa-link"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-item-container">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="2000">
-                        <div class="img-wrapper">
-                            <img src="https://avatars2.githubusercontent.com/u/7922748?v=3&s=143" class="img-responsive img-circle" alt="Kuba Walinski" />
-                        </div>
-                        <div class="name">Kuba Walinski</div>
-                        <div class="sub">Software Architect</div>
-                        <p class="small">Kuba developed his passion for computing at an early age, playing Tetris and Civilization on the family's PC. He started coding in middle school, when he got his hands on a copy of Visual Studio and started playing with VB6. Then he went on discovering other programming languages: Pascal, C, C++, Java, PHP, Prolog, C#, JavaScript & Python.</p>
-                        <div class="social-link">
-                            <a href="https://twitter.com/kubawalinski"><span class="fa fa-twitter"></span></a>
-                            <a href="http://blog.kubawalinski.com"><span class="fa fa-link"></span></a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <a class="carousel-nav carousel-prev"><i class="fa fa-angle-left fa-3x"></i></a>
             <a class="carousel-nav carousel-next"><i class="fa fa-angle-right fa-3x"></i></a>
