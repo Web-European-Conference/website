@@ -25,6 +25,7 @@
     <script type="text/javascript" src="/assets/js/jquery.countTo.js"></script>
     <script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
     <script type="text/javascript" src="/assets/js/waypoints-sticky.min.js"></script>
+    <script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
     @if(model.livereload){
     <script src="//localhost:35729/livereload.js"></script>

@@ -252,7 +252,29 @@
 
         });
 
+        initializeCarousel();
+
     });
+
+    function initializeCarousel(){
+        var owl = $("#speakers-carousel");
+ 
+        owl.owlCarousel({
+            items : 4, //4 items above 1280px browser width
+            itemsDesktop : [1279,4], //5 items between 1279px and 960px
+            itemsDesktopSmall : [959,3], // betweem 959px and 768px
+            itemsTablet: [767,2], //2 items between 600 and 0
+            itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+        });
+       
+        // Custom Navigation Events
+        $(".carousel-next").click(function(){
+          owl.trigger('owl.next');
+        })
+        $(".carousel-prev").click(function(){
+          owl.trigger('owl.prev');
+        })
+    };
 
     // ****** GOOGLE MAP *******
     var map;

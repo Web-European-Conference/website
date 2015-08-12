@@ -26,6 +26,9 @@ ASP.NET vNext, node.js, ruby, angular.js and much more.">
     <link rel="stylesheet" href="/css/green.css">
     <link href="/css/responsive.css" rel="stylesheet" type="text/css" />
 
+    <link href="/assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/owl.theme.css" rel="stylesheet" type="text/css" />
+
     <!--[if lt IE 9]>
     <script src="/assets/js/html5.js"></script>
     <script src="/assets/js/respond.min.js"></script>
