@@ -766,6 +766,73 @@
     </div>
 </section>
 <!-- End Map -->
+
+<!-- Location info -->
+<section id="directions" class="section dark">
+    <div class="container">
+        <div class="icon-wrap">
+            <span class="icon icon-office-25 icon-active"></span>
+        </div>
+        <h4>Directions and Hotel Info:</h4>
+        <br />
+        <br />
+        <section class="nav-tabs-simple">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <a href="#directions" data-toggle="tab">
+                        <i class="icon icon-shopping-24"></i> How to arrive
+                    </a>
+                </li>
+                <li>
+                    <a href="#hotels" data-toggle="tab">
+                        <i class="icon icon-shopping-17"></i> Hotels
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="directions">
+                    <article class="row">
+                        <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+                            <h6>Directions</h6>
+                            <p>There are 3 airports in Milano: Malpensa, Linato, Orio al Serio (Bergamo). They are all more or less 50-70 minutes with public transports from Milano City Center, and the all cost between 6 and 12 euro.</p>
+                            <ul class="sub-list">
+                                <li><i class="icon icon-travel-transportation-01"></i> <strong>From Malpensa</strong>: Once you arrive at the airport just follow the sign for <a href="http://www.malpensaexpress.it/en/" target="_blank">Malpensa Express</a>. There is a train every 30 minutes from 6am till 1:30am. You will arrive in Milano Central Station or in Milano Cadorna. And from there you have access to the subway.</li>
+                                
+                                <li><i class="icon icon-travel-transportation-01"></i> <strong>From Linate</strong>: Public Bus n 72. This will take you to Piazza San Babila, a few minutes walk from Duomo, and with access to subway. You can also take the <a href="http://www.atm.it/en/AltriServizi/Trasporto/Pages/airbus.aspx" target="_blank">Air bus</a> that will take you to Milano Central Station.</li>
+
+                                <li><i class="icon icon-travel-transportation-01"></i> <strong>From Orio al Serio (Bergamo)</strong>: Take the <a href="http://www.orioshuttle.com/" target="_blank">Orio Shuttle</a>, a bus hat will take you to Milano Central Station.</li>
+                               
+                            </ul>
+                            <p>From the metro station take the Line 5 (Violet line direction Bignami) and take the Bicocca Exit. From there 5 minutes walking". </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="tab-pane fade" id="hotels">
+                    <article class="row">
+                        <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+                            <h6>Hotel conventions</h6>
+                            <ul class="sub-list">
+                                <li>
+                                    <i class="icon icon-shopping-17"></i>
+                                    The first hotel is <a href="https://www.hotelarcimboldi.it/" target="_blank">Hotel Arcimboldi</a>, just a few minutes walk from the venue. We'll have a 15% discount by specifying the code <strong>EUROPEAN WEB CONFERENCE</strong> when booking via email at <a href="mailto:arcimboldi@@bookingsolutions.it">arcimboldi@@bookingsolutions.it</a>.
+                                </li>
+                                <li>
+                                    <i class="icon icon-shopping-17"></i>
+                                    The first hotel is <a href="http://www.ideahotel.it/web/guest" target="_blank">Idea Hotel Bicocca</a>, just a few minutes walk from the venue. We'll have a 15% discount by specifying the code <strong>EUROPEAN WEB CONFERENCE</strong> when booking via email at <a href="mailto:bicocca@@bookingsolutions.it">bicocca@@bookingsolutions.it .</a>. .
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!--  End Location info  -->
+
+
 @html.include('footer')
 </body>
 }) })
