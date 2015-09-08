@@ -754,7 +754,7 @@
             <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
                 <h3>Location</h3>
                 <ul itemscope="" itemtype="http://schema.org/PostalAddress">
-                    <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca - <strong>Building U9</strong></li>
+                    <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Universita' degli studi di Milano - Bicocca - <strong>Building U6</strong></li>
                     <li itemprop="email"><i class="fa fa-envelope highlight"></i><a href="mailto:info@@webnextconf.eu">info@@webnextconf.eu</a></li>
                     <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i>
                         <time itemprop="startDate" datetime="2015-09-26T08:30">8:30</time> -
@@ -805,7 +805,7 @@
                                 <li><i class="icon icon-travel-transportation-01"></i> <strong>From Orio al Serio (Bergamo)</strong>: Take the <a href="http://www.orioshuttle.com/" target="_blank">Orio Shuttle</a>, a bus hat will take you to Milano Central Station.</li>
                                
                             </ul>
-                            <p>From the metro station take the Line 5 (Violet line direction Bignami) and take the Bicocca Exit. From there 5 minutes walking". </p>
+                            <p>From the metro station take the Line 5 (Violet line direction Bignami) and take the Ponale Exit. From there 8 minutes walking (700mt)". </p>
                         </div>
                     </article>
                 </div>
