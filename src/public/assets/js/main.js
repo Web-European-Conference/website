@@ -278,7 +278,7 @@
 
     // ****** GOOGLE MAP *******
     var map;
-    var brooklyn = new google.maps.LatLng(45.513699, 9.210525);
+    var brooklyn = new google.maps.LatLng(45.518383, 9.213452);
 
     var MY_MAPTYPE_ID = 'custom_style';
 
