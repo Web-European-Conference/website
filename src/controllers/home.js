@@ -33,6 +33,10 @@
                 });
         });
 
+        app.get("/register-Web%20European%20Conference", function(req,res){
+            res.redirect(301, '/');
+        });
+
     };
 
     homeController.populateModelWithSpeakers = function(model) {
