@@ -807,7 +807,12 @@
                 <div class="tab-pane fade in active" id="directions">
                     <article class="row">
                         <div class="col-md-12 col-sm-12 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-                            <h6>Directions</h6>
+                            <h6>Aperitivo - Directions</h6>
+                            <p>The aperitivo alla Milanese, will be at <a href="http://www.lebanque.it/location/?mc_cid=ab496f3a21&mc_eid=e8442be9dc" target="_blank">Le Banque</a>, very close to Duomo and La Scala.</p>
+                            <p>Be on time: the aperitivo starts at 18:30</p>
+                            <p>The address is: Via Bassano Porrone, 6 Milano - here <a href="https://www.google.com/maps/place/Le+Banque/@45.4661873,9.1868502,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x68eab25775008fcf?mc_cid=ab496f3a21&mc_eid=e8442be9dc" target="_blank">Map on Google Maps</a></p>
+                            <p>&nbsp;</p>
+                            <h6>Conference - Directions</h6>
                             <p>There are 3 airports in Milano: Malpensa, , Orio al Serio (Bergamo). They are all more or less 50-70 minutes Linate with public transports from Milano City Center, and the all cost between 6 and 12 euro.</p>
                             <ul class="sub-list">
                                 <li><i class="icon icon-travel-transportation-01"></i> <strong>From Malpensa</strong>: Once you arrive at the airport just follow the sign for <a href="http://www.malpensaexpress.it/en/" target="_blank">Malpensa Express</a>. There is a train every 30 minutes from 6am till 1:30am. You will arrive in Milano Central Station or in Milano Cadorna. And from there you have access to the subway.</li>
@@ -818,6 +823,7 @@
                                
                             </ul>
                             <p>From the metro station take the Line 5 (Violet line direction Bignami) and take the Ponale Exit. From there 8 minutes walking (700mt)". </p>
+
                         </div>
                     </article>
                 </div>
